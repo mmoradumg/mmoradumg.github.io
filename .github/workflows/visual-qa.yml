@@ -1,0 +1,83 @@
+name: UMG Cinematic Visual QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/visual-qa.yml'
+      - 'index.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  visual-qa:
+    name: Screenshot live UMG on iPhone and desktop
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser for screenshots
+        run: |
+          npm --no-save --no-package-lock install playwright@1.55.0
+          npx playwright install --with-deps chromium
+      - name: Capture live page and all animated scenes
+        run: |
+          mkdir -p screenshots
+          cat > /tmp/umg-visual.cjs <<'JS'
+          const { chromium } = require(process.cwd()+'/node_modules/playwright');
+          (async()=>{
+            const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+            const errors=[];
+            async function pageFor(width,height,mobile){
+              const page=await browser.newPage({viewport:{width,height},deviceScaleFactor:mobile?2:1,isMobile:mobile,hasTouch:mobile});
+              page.on('pageerror',e=>errors.push(e.message));
+              await page.goto('https://umg-eg.com/?visual='+Date.now(),{waitUntil:'domcontentloaded',timeout:45000});
+              await page.locator('#flipbox').waitFor({timeout:10000});
+              await page.waitForTimeout(2200);
+              return page;
+            }
+            let page=await pageFor(390,844,true);
+            for(let i=1;i<=3;i++){
+              await page.screenshot({path:'screenshots/UMG-iPhone-scene-'+i+'.png'});
+              if(i<3){await page.locator('#nextScene').click();await page.waitForTimeout(1050);}
+            }
+            await page.screenshot({path:'screenshots/UMG-iPhone-fullpage.png',fullPage:true});
+            console.log('iPhone title',await page.title());
+            console.log('iPhone scene',await page.locator('#scene-title').innerText());
+            await page.close();
+            page=await pageFor(1440,900,false);
+            await page.screenshot({path:'screenshots/UMG-desktop.png'});
+            await page.screenshot({path:'screenshots/UMG-desktop-fullpage.png',fullPage:true});
+            console.log('Desktop title',await page.title());
+            console.log('Page errors',errors.join(' | ')||'none');
+            if(errors.length)process.exitCode=1;
+            await browser.close();
+          })().catch(e=>{console.error(e);process.exitCode=1});
+          JS
+          node /tmp/umg-visual.cjs
+      - name: Generate animated iPhone preview
+        if: success()
+        run: |
+          python -m pip install --quiet Pillow
+          python - <<'PY'
+          from PIL import Image,ImageOps,ImageDraw
+          frames=[]
+          for i in (1,2,3):
+              im=Image.open(f'screenshots/UMG-iPhone-scene-{i}.png').convert('RGB')
+              im.thumbnail((480,1020))
+              frames.append(im)
+          frames[0].save('screenshots/UMG-iPhone-animation.gif',save_all=True,append_images=frames[1:],
+                         duration=[1300,1300,1500],loop=0,optimize=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: umg-cinematic-visual-preview
+          path: screenshots/
+          if-no-files-found: error
+          retention-days: 14
