@@ -179,6 +179,50 @@ h1,h2,h3,p{margin-top:0}
 @media(prefers-reduced-motion:reduce){.factory-badge:before,.factory-halo,.factory-screen,.factory-visual .pipe,.factory-scan{animation:none!important}}
 
 .portrait-mark{border-radius:50%;overflow:hidden;padding:0;background:#17142d;border:2px solid rgba(178,119,255,.85);box-shadow:0 0 16px rgba(158,93,255,.55);flex-shrink:0}.portrait-mark img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 42%;border-radius:50%}
+
+/* UMG approved cinematic 3D experience: actual 360-degree CSS cube */
+.kinetic{--cube-size:min(33vw,465px);position:relative;display:grid;place-items:center;perspective:1200px;perspective-origin:50% 47%;isolation:isolate;overflow:visible}
+.kinetic .stage-glow{inset:1% -5% 0;opacity:.72}
+.kinetic .stage-shadow{inset:68% 3% -7%;transform:none;filter:blur(26px);opacity:.95}
+.flipbox{--half:calc(var(--cube-size) / 2);position:relative;inset:auto;top:auto;left:auto;width:var(--cube-size);height:var(--cube-size);max-width:none;border-radius:0;box-shadow:none;cursor:pointer;transform-style:preserve-3d;transform:rotateX(-9deg) rotateY(0deg);animation:umg-rotation-360 26s linear infinite;transition:none;will-change:transform}
+.flipbox.is-flipping{transform:rotateX(-9deg) rotateY(0deg)!important}
+@keyframes umg-rotation-360{0%{transform:rotateX(-9deg) rotateY(0deg)}100%{transform:rotateX(-9deg) rotateY(360deg)}}
+.kinetic:hover .flipbox,.kinetic:focus-within .flipbox{animation-play-state:paused}
+.poster,.cube-face{position:absolute;inset:0;border-radius:24px;backface-visibility:hidden;overflow:hidden;isolation:isolate;border:2px solid rgba(230,215,255,.77);box-shadow:0 0 19px rgba(160,100,255,.52),0 0 48px rgba(86,164,255,.4),inset 0 0 36px rgba(221,209,255,.24);transform-style:preserve-3d}
+.poster{transform:translateZ(var(--half));background:linear-gradient(128deg,#3e66ef,#ad72f2 52%,#ff9ccc)}
+.poster:after{inset:7px;border-radius:17px;box-shadow:0 0 22px rgba(122,246,255,.2)}
+.cube-face{display:flex;flex-direction:column;justify-content:space-between;padding:28px;direction:ltr}
+.cube-face:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(145deg,rgba(255,255,255,.28),transparent 38%,rgba(7,1,44,.44));z-index:-1}
+.cube-face:after{content:"";position:absolute;inset:8px;border-radius:17px;border:1px solid rgba(255,255,255,.22);pointer-events:none}
+.cube-right{transform:rotateY(90deg) translateZ(var(--half));background:radial-gradient(circle at 77% 20%,#f8b5d5,transparent 53%),radial-gradient(circle at 15% 87%,#5ac2fd,transparent 58%),linear-gradient(130deg,#1d2fa4,#a36be9 65%,#f5a9c0)}
+.cube-back{transform:rotateY(180deg) translateZ(var(--half));background:radial-gradient(circle at 60% 20%,#78ffdd,transparent 45%),linear-gradient(145deg,#17305c,#255b9b 51%,#8b76df)}
+.cube-left{transform:rotateY(-90deg) translateZ(var(--half));background:radial-gradient(circle at 70% 15%,#ffddcc,transparent 57%),linear-gradient(145deg,#492c89,#e170b5 58%,#ffad8d)}
+.cube-face .face-label{font:850 11px Manrope,Arial,sans-serif;letter-spacing:.18em;color:#fff;opacity:.93;z-index:1}
+.cube-face .face-head{font:850 clamp(25px,3vw,42px)/1.08 Manrope,Arial,sans-serif;letter-spacing:-.065em;color:white;text-shadow:0 3px 20px rgba(0,0,0,.2);z-index:1}
+.cube-face .face-kicker{font:850 10px Manrope,Arial,sans-serif;letter-spacing:.16em;z-index:1}
+.cube-face .face-sculpture{position:absolute;inset:14% 9% 17%;border-radius:50%;transform:rotate(-23deg);background:conic-gradient(from 25deg,#dafaff,#749aff,#a77aff,#e8afff,#b2fcfb,#dafaff);box-shadow:inset 25px 25px 45px rgba(255,255,255,.59),inset -25px -29px 45px rgba(51,28,121,.43),0 22px 35px rgba(23,22,104,.23)}
+.cube-face .face-sculpture:after{content:"";position:absolute;inset:25%;border-radius:50%;background:linear-gradient(135deg,#f3ffff,#6f82f3 53%,#4f2991);box-shadow:inset 9px 9px 20px rgba(255,255,255,.7)}
+.cube-back .face-sculpture{inset:21% 14% 25%;border-radius:17%;background:linear-gradient(135deg,rgba(235,255,255,.75),rgba(77,214,249,.35));transform:rotate(-13deg) skewY(4deg);box-shadow:0 18px 40px rgba(15,34,101,.46),inset 0 0 22px rgba(255,255,255,.45)}
+.cube-back .face-sculpture:after{inset:21% 12%;border-radius:8%;background:repeating-linear-gradient(90deg,transparent 0 12%,rgba(0,65,120,.19) 12% 14%),linear-gradient(0deg,#5d62ff 0 25%,#45dbef 25% 55%,#b5ffdb 55% 80%);box-shadow:none}
+.cube-left .face-sculpture{inset:20% 14% 27%;border-radius:36%;transform:rotate(-24deg);background:linear-gradient(133deg,#ffe4d0,#f7a6b9 34%,#b97afa 65%,#71d7ff);box-shadow:inset 20px 15px 32px rgba(255,255,255,.7),inset -20px -20px 25px rgba(89,23,139,.36)}
+.cube-left .face-sculpture:after{inset:33%;border-radius:50%;background:#d9a8ff}
+.kinetic .scene-controls{bottom:1%;z-index:25}
+.kinetic .floater{z-index:20}
+.hero-slogan{max-width:515px;border-inline-start:2px solid rgba(223,156,255,.7);padding-inline-start:20px;margin:8px 0 24px;font-size:clamp(15px,1.8vw,22px);font-weight:750;line-height:1.85;color:#f4defc}
+.hero-slogan strong{background:linear-gradient(105deg,#ffb7dd,#cdb9ff,#a0ebff);background-clip:text;-webkit-background-clip:text;color:transparent}
+@media(max-width:760px){
+.kinetic{--cube-size:min(68vw,340px);perspective:900px;aspect-ratio:1/1.1;max-width:none;margin:30px auto 22px}
+.flipbox{--half:calc(var(--cube-size) / 2)}
+.cube-face{border-radius:17px;padding:17px}.poster{border-radius:17px}
+.cube-face:after{inset:5px;border-radius:12px}
+.cube-face .face-label{font-size:8px}
+.cube-face .face-head{font-size:clamp(19px,5.5vw,30px)}
+.cube-face .face-kicker{font-size:8px}
+.hero-slogan{font-size:15px;line-height:1.75}
+}
+@media(max-width:380px){.kinetic{--cube-size:min(64vw,285px)}}
+@media(prefers-reduced-motion:reduce){.flipbox{animation:none!important;transform:rotateX(-9deg) rotateY(-18deg)}.kinetic:hover .flipbox{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -205,6 +249,7 @@ h1,h2,h3,p{margin-top:0}
 <p class="hero-description" data-lang="ar">مش مجرد موقع شركة. دي مساحة نعرض فيها اللي بنبنيه: ذكاء اصطناعي، صناعة حقيقية، وبرامج بتحوّل الأفكار لمنتجات ملموسة.</p>
 <p class="hero-description" data-lang="en">More than a corporate website. A living space for everything we're building: intelligent software, real-world industry and ideas made tangible.</p>
 <div class="hero-buttons"><a class="primary-btn" href="#universes"><span data-lang="ar">استكشف العالم بتاعنا</span><span data-lang="en">Explore our worlds</span><span>↗</span></a><a class="ghost-btn" href="/apps/dollar/"><span data-lang="ar">اكتشف DOLLAR</span><span data-lang="en">Meet DOLLAR</span><span>→</span></a></div>
+<div class="hero-slogan"><span data-lang="ar"><strong>الخيال حقيقة…</strong> وواقع أمامك حين تقرر أن تراه.</span><span data-lang="en"><strong>Imagination becomes reality</strong> when you choose to see it.</span></div>
 <div class="hero-micro">A SPACE FOR IDEAS IN MOTION <i></i> 2026</div>
 </div>
 <div class="kinetic" id="kinetic" aria-label="Interactive visual gallery, swipe left or right to change scenes">
@@ -217,10 +262,14 @@ h1,h2,h3,p{margin-top:0}
 <div class="poster-light"></div>
 <div class="poster-top"><small>UMG / IMAGINATION LAB</small><span class="tag" id="scene-tag">01 / INTELLIGENCE</span></div>
 <div class="poster-bottom"><strong id="scene-title">BEYOND<br>THE EXPECTED.</strong><span id="scene-counter">01 / 03</span></div>
-</div></div>
+</div>
+<div class="cube-face cube-right" aria-hidden="true"><span class="face-label">UMG / IDEAS IN MOTION</span><div class="face-sculpture"></div><div class="face-head">BUILDING<br>WHAT'S NEXT.</div></div>
+<div class="cube-face cube-back" aria-hidden="true"><span class="face-label">UMG / SMART INDUSTRY</span><div class="face-sculpture"></div><div class="face-head">UMG<br>FACTORY.</div></div>
+<div class="cube-face cube-left" aria-hidden="true"><span class="face-label">UMG / OUR VISION</span><div class="face-sculpture"></div><div class="face-head">IMAGINE.<br>CREATE.</div></div>
+</div>
 <div class="floater float-one">✦ &nbsp; MADE TO MOVE</div><div class="floater float-two">FUTURE / NOW &nbsp; ✧</div>
 <div class="scene-controls"><button type="button" id="prevScene" aria-label="Previous image">‹</button><div class="dots" id="sceneDots"><button type="button" class="active" aria-label="Image 1" aria-current="true"></button><button type="button" aria-label="Image 2"></button><button type="button" aria-label="Image 3"></button></div><button type="button" id="nextScene" aria-label="Next image">›</button></div>
-<p id="scene-caption" style="position:absolute;opacity:0;pointer-events:none">An interactive card flips to reveal three vividly colored concepts.</p>
+<p id="scene-caption" style="position:absolute;opacity:0;pointer-events:none">A kinetic 3D cube rotates through a full 360 degrees and reveals imaginative visual concepts.</p>
 </div></div>
 <div class="container scrollhint"><span>SCROLL TO EXPLORE</span><span class="arrow">↓</span></div>
 </section>
@@ -284,9 +333,9 @@ const scenes=Array.from(document.querySelectorAll('.scene')),dots=Array.from(doc
 const titles=['BEYOND<br>THE EXPECTED.','MAKE<br>IT REAL.','IDEAS<br>IN MOTION.'];
 const tags=['01 / INTELLIGENCE','02 / INDUSTRY','03 / SOFTWARE'];
 let index=0,busy=false,timer=null,hover=false;
-function changeScene(next){if(busy || next===index)return;busy=true;flip.classList.add('is-flipping');
+function changeScene(next){if(busy || next===index)return;busy=true;
 setTimeout(()=>{index=(next+scenes.length)%scenes.length;scenes.forEach((el,i)=>el.classList.toggle('active',i===index));dots.forEach((el,i)=>{el.classList.toggle('active',i===index);if(i===index)el.setAttribute('aria-current','true');else el.removeAttribute('aria-current')});
-document.getElementById('scene-title').innerHTML=titles[index];document.getElementById('scene-tag').textContent=tags[index];document.getElementById('scene-counter').textContent='0'+(index+1)+' / 03';flip.classList.remove('is-flipping');setTimeout(()=>busy=false,reduced?0:550)},reduced?0:350)}
+document.getElementById('scene-title').innerHTML=titles[index];document.getElementById('scene-tag').textContent=tags[index];document.getElementById('scene-counter').textContent='0'+(index+1)+' / 03';setTimeout(()=>busy=false,reduced?0:550)},reduced?0:350)}
 function advance(delta){changeScene((index+delta+scenes.length)%scenes.length);restart()}
 function stop(){if(timer){clearInterval(timer);timer=null}}
 function start(){stop();if(!reduced && !document.hidden && !hover){timer=setInterval(()=>changeScene((index+1)%scenes.length),5400)}}
