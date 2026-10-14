@@ -141,6 +141,43 @@ h1,h2,h3,p{margin-top:0}
 }
 @media(max-width:360px){.hero h1{font-size:46px}.hero-buttons{flex-wrap:wrap}.primary-btn,.ghost-btn{width:100%}.poster-bottom strong{font-size:24px}.kinetic{margin-top:2px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+
+/* UMG FACTORY cinematic teaser — concept, not a live service */
+.factory-feature{position:relative;display:grid;grid-template-columns:.98fr 1.02fr;gap:24px;align-items:center;min-height:555px;margin:5px 0 118px;overflow:hidden;isolation:isolate;padding:55px clamp(30px,5.1vw,75px);border-radius:38px;border:1px solid rgba(148,255,223,.25);background:radial-gradient(ellipse 72% 86% at 92% 52%,rgba(40,169,153,.22),transparent 74%),radial-gradient(ellipse 75% 75% at 10% 10%,rgba(43,104,123,.17),transparent 75%),linear-gradient(140deg,#0d272a,#091921 54%,#101d31)}
+.factory-feature:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.35;background-image:linear-gradient(rgba(145,253,224,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(145,253,224,.09) 1px,transparent 1px);background-size:50px 50px;mask-image:linear-gradient(100deg,transparent 7%,#000 100%)}
+.factory-feature:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:4;border-radius:inherit;box-shadow:inset 0 1px rgba(196,255,231,.14)}
+.factory-badge{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(208,255,170,.36);border-radius:999px;background:rgba(155,255,175,.09);font:800 10px Manrope,sans-serif;letter-spacing:.12em;color:#d4ffae}
+.factory-badge:before{content:"";width:7px;height:7px;background:#c4ff98;border-radius:50%;box-shadow:0 0 13px #b2fc84;animation:factoryPulse 2.3s ease-in-out infinite}
+@keyframes factoryPulse{50%{opacity:.38;box-shadow:0 0 23px #c1ff9a}}
+.factory-feature h3{font:800 clamp(47px,5.5vw,76px)/1.07 Manrope,sans-serif;letter-spacing:-.072em;margin:22px 0 12px}
+.factory-feature h3 .factory-gradient{background:linear-gradient(110deg,#f7ffef,#95f9e1 55%,#c4ff94);background-clip:text;-webkit-background-clip:text;color:transparent}
+.factory-feature .factory-subtitle{font:800 11px Manrope,sans-serif;color:#a3edd7;letter-spacing:.19em;margin-bottom:20px}
+.factory-feature .factory-body{max-width:530px;color:#a9c8c1;line-height:1.95;font-size:15px;margin:0 0 25px}
+.factory-cta{display:inline-flex;align-items:center;gap:18px;font-size:13px;font-weight:850;padding:14px 22px;background:#dcffe8;color:#072c2b;border-radius:99px;transition:transform .22s,background .22s}.factory-cta:hover{transform:translateY(-3px);background:white}
+.factory-mock{position:relative;aspect-ratio:1.12;max-width:500px;width:100%;justify-self:center}
+.factory-halo{position:absolute;inset:5%;background:radial-gradient(circle,#56e7c75c,transparent 65%);filter:blur(33px);animation:factoryBreathe 9s ease-in-out infinite}
+@keyframes factoryBreathe{50%{transform:scale(1.16);opacity:.65}}
+.factory-screen{position:absolute;inset:10% 2% 12%;border-radius:23px;overflow:hidden;border:1px solid rgba(160,255,222,.45);background:linear-gradient(150deg,rgba(24,75,78,.94),rgba(5,27,36,.98));box-shadow:0 25px 70px rgba(0,8,13,.6),inset 0 1px rgba(242,255,252,.19);transform:perspective(1050px) rotateY(-9deg) rotateX(6deg);animation:factoryPanel 8s ease-in-out infinite}
+@keyframes factoryPanel{50%{transform:perspective(1050px) rotateY(-5deg) rotateX(2deg) translateY(-8px)}}
+.factory-screenbar{display:flex;justify-content:space-between;align-items:center;padding:12px 17px;border-bottom:1px solid rgba(144,252,215,.2);font:800 10px Manrope,sans-serif;letter-spacing:.09em;direction:ltr}
+.factory-screenbar em{font-style:normal;color:#a4ffde;font-size:9px}
+.factory-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:19px;height:calc(100% - 42px);direction:ltr}
+.factory-visual{grid-column:1/-1;min-height:0;border:1px solid rgba(145,255,223,.17);background:repeating-linear-gradient(90deg,rgba(102,235,205,.035) 0 1px,transparent 1px 32px),linear-gradient(145deg,rgba(6,27,35,.7),rgba(13,46,46,.5));border-radius:13px;display:grid;place-items:center;position:relative;overflow:hidden}
+.factory-visual svg{width:90%;height:80%}
+.factory-visual .pipe{stroke:#7defd1;stroke-width:3;fill:none;stroke-linecap:round;stroke-dasharray:11 14;animation:factoryFlow 6s linear infinite}
+@keyframes factoryFlow{to{stroke-dashoffset:-200}}
+.factory-visual .part{fill:#1e6966;stroke:#9dffe0;stroke-width:2}.factory-visual .sensor{fill:#dcff99;filter:drop-shadow(0 0 8px #ddff93)}
+.factory-scan{position:absolute;left:0;right:0;top:-3%;height:28%;background:linear-gradient(180deg,transparent,rgba(146,255,221,.09),transparent);transform:translateY(-120%);animation:factorySweep 8s linear infinite}
+@keyframes factorySweep{to{transform:translateY(550%)}}
+.factory-stat{border:1px solid rgba(143,253,219,.17);border-radius:11px;padding:11px;background:rgba(11,40,43,.8);font:800 9px Manrope,sans-serif;letter-spacing:.05em;min-width:0}
+.factory-stat small{display:block;color:#8fc8bd;font-size:8px;margin-bottom:10px}.factory-stat strong{display:block;color:#d0ffee;font-size:11px}.factory-stat svg{width:100%;height:26px;margin-top:5px}
+.factory-stat polyline{stroke:#a5ffb8;stroke-width:2;fill:none}.factory-stat .warn{stroke:#ffb7a5}
+.factory-flag{position:absolute;bottom:6%;right:-2%;background:rgba(24,70,65,.9);border:1px solid rgba(167,255,211,.45);border-radius:14px;padding:12px 15px;font:800 10px Manrope,sans-serif;color:#ccffda;backdrop-filter:blur(12px);box-shadow:0 15px 27px rgba(0,0,0,.32)}
+.factory-caption{position:absolute;top:3%;left:-2%;border-radius:12px;background:rgba(28,73,74,.8);border:1px solid rgba(180,255,226,.34);padding:10px 13px;font:800 9px Manrope,sans-serif;color:#b2ffe3}
+@media(max-width:900px){.factory-feature{grid-template-columns:1fr;gap:15px;padding:38px 24px;margin-bottom:70px}.factory-mock{max-width:425px;aspect-ratio:1.4}.factory-feature h3{font-size:clamp(44px,11vw,70px)}}
+@media(max-width:760px){.factory-feature{border-radius:25px;margin-top:10px;padding:33px 22px;min-height:0}.factory-feature h3{font-size:clamp(42px,12vw,58px)}.factory-feature .factory-body{font-size:14px}.factory-mock{aspect-ratio:1.05;width:100%}.factory-screen{inset:10% 2% 12%;transform:none;animation:none}.factory-screenbar{font-size:8px}.factory-grid{padding:11px;gap:7px}.factory-flag{right:0;font-size:8px;padding:8px}.factory-caption{left:0;font-size:8px}}
+@media(prefers-reduced-motion:reduce){.factory-badge:before,.factory-halo,.factory-screen,.factory-visual .pipe,.factory-scan{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -188,11 +225,39 @@ h1,h2,h3,p{margin-top:0}
 </section>
 <div class="marquee" aria-label="What we create"><div class="marquee-track" aria-hidden="true"><span>ARTIFICIAL INTELLIGENCE</span><b>✦</b><span>INDUSTRIAL THINKING</span><b>✧</b><span>CREATIVE TECHNOLOGY</span><b>✦</b><span>IDEAS IN MOTION</span><b>✧</b><span>ARTIFICIAL INTELLIGENCE</span><b>✦</b><span>INDUSTRIAL THINKING</span><b>✧</b><span>CREATIVE TECHNOLOGY</span><b>✦</b><span>IDEAS IN MOTION</span><b>✧</b></div></div>
 <section class="section container" id="universes">
-<div class="sec-head reveal"><div><div class="sec-overline">01 / THE UMG UNIVERSE</div><h2 class="sec-title"><span data-lang="ar">عالمنا مش<br><span class="grad-text">عالم واحد.</span></span><span data-lang="en">Not just one<br><span class="grad-text">kind of world.</span></span></h2></div><p class="sec-note" data-lang="ar">3 مسارات بتتقاطع: تشخيص ذكي، نظم أعمال، وتعليم بالذكاء الاصطناعي. كل مشروع له فكرة وتجربة مختلفة.</p><p class="sec-note" data-lang="en">Three intersecting directions: intelligent diagnostics, business systems and AI-assisted learning.</p></div>
+<div class="sec-head reveal"><div><div class="sec-overline">01 / THE UMG UNIVERSE</div><h2 class="sec-title"><span data-lang="ar">عالمنا مش<br><span class="grad-text">عالم واحد.</span></span><span data-lang="en">Not just one<br><span class="grad-text">kind of world.</span></span></h2></div><p class="sec-note" data-lang="ar">4 مسارات بتتقاطع: التشخيص الذكي، إدارة المصانع، نظم الأعمال، والتعليم بالذكاء الاصطناعي. كل مشروع له فكرة وتجربة مختلفة.</p><p class="sec-note" data-lang="en">Four connected directions: intelligent diagnostics, factory intelligence, business systems and AI-assisted learning.</p></div>
 <div class="portfolio">
 <article class="work-card one reveal"><div class="card-art"></div><div class="w-top"><span>AI DIAGNOSTICS</span><span class="idx">01</span></div><div class="w-bottom"><h3>DOLLAR.</h3><p data-lang="ar">ذكاء تشخيصي للسيارات والمعدات — من الأعراض والأدلة لخطوة الفحص التالية. إصدار تجريبي قيد الاختبار.</p><p data-lang="en">Diagnostic intelligence for vehicles and equipment. From symptoms and evidence to the next smart test. In private beta.</p><a href="/apps/dollar/"><span data-lang="ar">اكتشف DOLLAR ↗</span><span data-lang="en">Discover DOLLAR ↗</span></a></div></article>
 <article class="work-card two reveal"><div class="card-art"></div><div class="w-top"><span>BUSINESS OS</span><span class="idx">02</span></div><div class="w-bottom"><h3>UMG ERP.</h3><p data-lang="ar">منظومة تشغيل وإدارة تربط الحسابات والمخازن والتصنيع. قيد التطوير.</p><p data-lang="en">An operating platform connecting finance, inventory and manufacturing. In development.</p><a href="mailto:gm@umg-eg.com?subject=UMG%20ERP"><span data-lang="ar">اعرف أكتر ↗</span><span data-lang="en">Learn more ↗</span></a></div></article>
 <article class="work-card three reveal"><div class="card-art"></div><div class="w-top"><span>LEARNING INTELLIGENCE</span><span class="idx">03</span></div><div class="w-bottom"><h3>KNOW AI.</h3><p data-lang="ar">تعلّم أذكى: أسئلة، شرح وتدريب بواجهة عربية وإنجليزية. قيد التطوير.</p><p data-lang="en">A smarter learning companion with questions, lessons and quizzes. In development.</p><a href="mailto:gm@umg-eg.com?subject=UMG%20Know%20AI"><span data-lang="ar">اعرف أكتر ↗</span><span data-lang="en">Learn more ↗</span></a></div></article>
+</div></section>
+
+<section class="factory-feature container reveal" id="factory" aria-labelledby="factory-name">
+<div class="factory-copy">
+<div class="factory-badge">✦ COMING SOON · UMG ONE</div>
+<h3 id="factory-name">UMG<br><span class="factory-gradient">FACTORY.</span></h3>
+<div class="factory-subtitle">ONE FACTORY. ONE INTELLIGENCE.</div>
+<p class="factory-body" data-lang="ar">إدارة مصنعك بالكامل بالذكاء الاصطناعي. من متابعة الإنتاج والورديات والمخزون إلى تشخيص الأعطال ورصد إشارات الخطر مبكرًا، مع طموح التنبؤ باحتمالات العطل قبل توقف الماكينات.</p>
+<p class="factory-body" data-lang="en">Run your factory through one intelligent platform. From production, shifts and inventory to AI-assisted fault diagnosis, early anomaly detection and the ambition of forecasting failure risks before costly downtime.</p>
+<a class="factory-cta" href="/apps/factory/"><span data-lang="ar">اكتشف UMG FACTORY</span><span data-lang="en">Explore UMG FACTORY</span><span>↗</span></a>
+</div>
+<div class="factory-mock" aria-label="Conceptual preview of connected factory monitoring, not live data">
+<div class="factory-halo"></div>
+<div class="factory-screen">
+<div class="factory-screenbar"><span>UMG ONE / FACTORY OS</span><em>CONCEPT VIEW</em></div>
+<div class="factory-grid">
+<div class="factory-visual"><div class="factory-scan"></div>
+<svg viewBox="0 0 480 180" aria-hidden="true">
+<path d="M38 106H115V78H177V103H253V53H344V103H442" class="pipe"/>
+<rect x="30" y="90" width="82" height="52" rx="9" class="part"/><rect x="175" y="81" width="85" height="61" rx="9" class="part"/><rect x="339" y="66" width="91" height="77" rx="9" class="part"/>
+<path d="M47 90V65H85V90M190 81V52H239V81M357 66V39H413V66" fill="none" stroke="#7adace" stroke-width="4"/>
+<circle cx="115" cy="78" r="5" class="sensor"/><circle cx="253" cy="53" r="5" class="sensor"/><circle cx="442" cy="103" r="5" class="sensor"/>
+<path d="M35 155H443" stroke="#4b9990" stroke-width="2" stroke-dasharray="4 6"/>
+</svg></div>
+<div class="factory-stat"><small>ANOMALY SIGNAL</small><strong>EARLY DETECTION</strong><svg viewBox="0 0 160 26" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,22 23,19 35,20 52,8 68,12 83,7 100,16 122,5 141,13 160,4"/></svg></div>
+<div class="factory-stat"><small>FAILURE RISK</small><strong>PREDICTIVE ANALYSIS</strong><svg viewBox="0 0 160 26" preserveAspectRatio="none" aria-hidden="true"><polyline class="warn" points="0,21 24,20 42,22 60,17 74,19 99,13 118,16 140,9 160,4"/></svg></div>
+</div></div>
+<div class="factory-caption">SENSORS · DATA · AI</div><div class="factory-flag">◉ INTELLIGENCE PREVIEW</div>
 </div></section>
 <section class="about-band" id="approach"><div class="container about-flex"><div class="reveal"><div class="sec-overline" style="color:#55458f">02 / THE WAY WE THINK</div><h2><span data-lang="ar">الخيال جميل.<br>التنفيذ <em style="font-style:normal;color:#7155c0">أجمل.</em></span><span data-lang="en">Ideas are magic.<br>Making them <em style="font-style:normal;color:#7155c0">real.</em></span></h2><p data-lang="ar">من خبرة العمليات الصناعية لواجهات برمجية جذابة: هدفنا تجربة مفيدة ومختلفة، من أول لمسة لآخر تفصيلة.</p><p data-lang="en">From real industrial operations to expressive software experiences, we care about what works — and how it feels.</p><a class="lightbtn" href="/mohamed/"><span data-lang="ar">تعرف على المطور ↗</span><span data-lang="en">Meet the developer ↗</span></a></div><div class="about-symbol" aria-hidden="true">UMG.</div></div></section>
 <section class="contact-section container" id="contact"><div class="sec-overline reveal">03 / SAY HELLO</div><h2 class="sec-title reveal"><span data-lang="ar">عندك فكرة؟<br><span class="grad-text">يلا نحققها.</span></span><span data-lang="en">Got an idea?<br><span class="grad-text">Let's make it happen.</span></span></h2><p class="reveal" data-lang="ar">للتواصل المهني أو الاستفسار عن مشروعات UMG، ابعت لنا مباشرة. البريد مسجل على الدومين الرسمي.</p><p class="reveal" data-lang="en">For projects, partnerships or product enquiries, reach us at our official domain email.</p><a class="email-link" href="mailto:gm@umg-eg.com">gm@umg-eg.com ↗</a></section>
