@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080c16">
+<meta name="description" content="Mohamed Murad — personal developer profile, software engineering, AI products and industrial systems.">
+<title>Mohamed Murad | Personal Developer Website</title>
+<link rel="canonical" href="https://mmoradumg.github.io/mohamed/">
+<style>
+:root{color-scheme:dark;--bg:#080b13;--panel:rgba(22,29,47,.76);--edge:rgba(154,178,232,.14);--text:#eef4ff;--muted:#9cacbf;--cyan:#4ee9fa;--violet:#9180ff;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 75% 45% at 10% 0,rgba(103,72,219,.21),transparent),radial-gradient(ellipse 60% 50% at 98% 22%,rgba(21,143,171,.14),transparent),var(--bg);color:var(--text);line-height:1.8;min-height:100vh}
+a{color:inherit;text-decoration:none}.shell{max-width:1120px;margin:0 auto;padding:0 25px}
+header{position:sticky;top:0;z-index:5;background:rgba(8,11,19,.82);border-bottom:1px solid var(--edge);backdrop-filter:blur(18px)}
+nav{height:75px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.brand{font-weight:900;letter-spacing:.04em;font-size:1.15rem;display:flex;align-items:center;gap:12px}
+.emblem{display:grid;place-items:center;width:37px;height:37px;border:1px solid #7c96c0;border-radius:11px;color:var(--cyan);font-size:13px;background:#17233a}
+.links{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:.9rem}
+.links a:hover{color:var(--cyan)}
+.lang{border:1px solid var(--edge);border-radius:12px;color:var(--text);background:#182037;cursor:pointer;padding:8px 14px;font-weight:700}
+main{padding-bottom:75px}.hero{display:grid;grid-template-columns:1.35fr .65fr;align-items:center;gap:65px;padding-top:105px;padding-bottom:92px}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;font-weight:800;color:var(--cyan);text-transform:uppercase}
+h1{font-size:clamp(3rem,7vw,5.8rem);line-height:1.12;letter-spacing:-.045em;margin:16px 0 10px}
+.grad{background:linear-gradient(100deg,#fff,#79e6fc,#b9a9ff);background-clip:text;-webkit-background-clip:text;color:transparent}
+.lead{color:#c9d3e3;font-size:clamp(1.1rem,2vw,1.3rem);max-width:635px}
+.hero p.note{max-width:615px;color:var(--muted);font-size:1rem;margin-top:16px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;gap:10px;align-items:center;justify-content:center;border-radius:14px;padding:12px 23px;font-weight:750;font-size:.92rem;transition:transform .16s}
+.btn:hover{transform:translateY(-2px)}.btn-primary{background:linear-gradient(105deg,#52eaf8,#a39cff);color:#09101c}.btn-secondary{border:1px solid #485673;background:#141c2c}
+.monogram{aspect-ratio:1;display:grid;place-items:center;border-radius:34px;position:relative;isolation:isolate;background:linear-gradient(145deg,rgba(76,223,249,.11),rgba(142,107,255,.1));border:1px solid rgba(143,195,250,.3);box-shadow:0 0 100px rgba(86,128,251,.08)}
+.monogram:before{content:"";position:absolute;inset:18px;border:1px solid rgba(133,196,237,.2);border-radius:26px;z-index:-1}.monogram b{font-size:clamp(3rem,8vw,6.7rem);letter-spacing:-.08em;color:#92dcef;font-weight:600;text-shadow:0 0 50px rgba(51,202,239,.4)}
+.line{height:1px;background:linear-gradient(to left,transparent,#334768,transparent)}section{scroll-margin-top:105px}
+.sec{padding:70px 0 20px}.sup{color:var(--cyan);text-transform:uppercase;font-weight:800;letter-spacing:.18em;font-size:.72rem}.sec h2{font-size:clamp(1.65rem,3.3vw,2.4rem);letter-spacing:-.035em;margin:7px 0 15px}.sec>p{max-width:725px;color:var(--muted);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.card{background:var(--panel);border:1px solid var(--edge);border-radius:20px;padding:26px;min-height:215px}
+.number{color:var(--cyan);font-size:.75rem;letter-spacing:.17em;font-weight:850}.card h3{font-size:1.17rem;margin:20px 0 6px}.card p{margin:0;color:var(--muted);font-size:.93rem}
+.contact{margin-top:60px;border:1px solid rgba(93,163,230,.3);background:radial-gradient(circle at 0 0,rgba(100,75,220,.16),transparent 55%),rgba(22,28,45,.8);border-radius:25px;padding:36px}
+.contact p{color:var(--muted);max-width:640px}.tag{color:#c7d4ec;font-size:.8rem;border:1px solid var(--edge);border-radius:999px;display:inline-block;padding:5px 12px}
+footer{border-top:1px solid var(--edge);padding:29px 0;color:var(--muted);font-size:.85rem}footer .shell{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+[lang=en]{display:none}html.en{direction:ltr}html.en [lang=ar]{display:none}html.en [lang=en]{display:revert}
+@media(max-width:750px){nav{height:66px}.links a:not(.lang){display:none}.hero{grid-template-columns:1fr;gap:32px;padding:65px 0 55px}.monogram{max-width:235px;width:100%;justify-self:start}.grid{grid-template-columns:1fr}.card{min-height:0}.contact{padding:24px}.shell{padding:0 20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<header><nav class="shell">
+<a href="#home" class="brand" aria-label="Mohamed Murad Home"><span class="emblem">MM</span><span>MOHAMED MURAD</span></a>
+<div class="links"><a href="#about"><span lang="ar">عني</span><span lang="en">About</span></a><a href="#work"><span lang="ar">مجالات العمل</span><span lang="en">Expertise</span></a><a href="#contact"><span lang="ar">تواصل</span><span lang="en">Contact</span></a><button class="lang" id="language" type="button" aria-label="Switch language">EN</button></div>
+</nav></header>
+<main class="shell">
+<section id="home" class="hero"><div>
+<div class="eyebrow">INDEPENDENT DEVELOPER PROFILE</div>
+<h1><span lang="ar">محمد <span class="grad">مراد</span></span><span lang="en">Mohamed <span class="grad">Murad</span></span></h1>
+<div class="lead"><span lang="ar">برمجيات ذكية. أنظمة عملية. حلول تبدأ من الفكرة وتصل إلى التطبيق.</span><span lang="en">Intelligent software. Practical systems. From concept to working products.</span></div>
+<p class="note"><span lang="ar">اهتمامي يجمع بين هندسة البرمجيات والذكاء الاصطناعي والتحول الرقمي للعمليات الصناعية والتجارية، مع التركيز على بناء منتجات قابلة للاستخدام.</span><span lang="en">My work spans software engineering, artificial intelligence, and digital systems for industrial and business operations, with a focus on usable products.</span></p>
+<div class="actions">
+<a class="btn btn-primary" href="#work"><span lang="ar">اكتشف مجالات عملي ←</span><span lang="en">Explore my work →</span></a>
+<a class="btn btn-secondary" href="https://github.com/mmoradumg" rel="noopener"><span lang="ar">حسابي على GitHub</span><span lang="en">My GitHub</span></a>
+</div></div><div class="monogram" aria-label="Mohamed Murad monogram"><b>MM.</b></div></section>
+<div class="line"></div>
+<section id="about" class="sec"><div class="sup">PROFILE / 01</div>
+<h2><span lang="ar">عنّي</span><span lang="en">About</span></h2>
+<p><span lang="ar">هذه مساحتي الشخصية كمطور وصاحب مشروعات تقنية. أعرض فيها اهتماماتي ومنتجاتي البرمجية بعيدًا عن الهوية القانونية والتجارية لأي شركة. التركيز على الجودة، الخصوصية، وتجربة المستخدم.</span><span lang="en">This is my independent developer profile: a space for my technology interests and software products, separate from the legal identity of any company. My priorities include quality, privacy, and user experience.</span></p>
+</section>
+<section id="work" class="sec"><div class="sup">FOCUS / 02</div><h2><span lang="ar">مجالات العمل</span><span lang="en">Areas of focus</span></h2>
+<div class="grid">
+<article class="card"><div class="number">01 / AI</div><h3><span lang="ar">تطبيقات الذكاء الاصطناعي</span><span lang="en">AI applications</span></h3><p><span lang="ar">أنظمة مساعدة ذكية تعتمد على النصوص والصور والصوت لتحليل المشكلات ودعم القرار.</span><span lang="en">Intelligent assistants that use language, images, and audio to help analyze complex problems.</span></p></article>
+<article class="card"><div class="number">02 / SOFTWARE</div><h3><span lang="ar">تطبيقات الموبايل والويب</span><span lang="en">Mobile & web software</span></h3><p><span lang="ar">تطبيقات متعددة المنصات، واجهات عربية وإنجليزية، وأنظمة تدعم العمل بأقل تعقيد.</span><span lang="en">Cross-platform experiences with Arabic and English interfaces and practical workflows.</span></p></article>
+<article class="card"><div class="number">03 / INDUSTRY</div><h3><span lang="ar">الأنظمة الصناعية والإدارية</span><span lang="en">Industrial & business systems</span></h3><p><span lang="ar">رقمنة العمليات والمخازن والإنتاج والبيانات التشغيلية لدعم الإدارة والتحسين المستمر.</span><span lang="en">Digital operations, inventory, production, and operational data for better oversight.</span></p></article>
+</div></section>
+<section id="contact" class="contact"><span class="tag">CONTACT / 03</span><h2><span lang="ar">تواصل معي</span><span lang="en">Get in touch</span></h2>
+<p><span lang="ar">يجري تجهيز بريد مهني خاص باسمي على دومين مستقل. إلى أن يتم تفعيل الدومين، تقدر تتواصل معي من خلال صفحتي على GitHub.</span><span lang="en">A personal-domain email address is being configured. Until the domain is activated, you can reach me via GitHub.</span></p>
+<a class="btn btn-secondary" href="https://github.com/mmoradumg" rel="noopener">GitHub ↗</a></section>
+</main>
+<footer><div class="shell"><span>© <span id="year">2026</span> Mohamed Murad</span><span lang="ar">هوية شخصية مستقلة · Personal Developer Profile</span><span lang="en">Independent personal identity · Developer Profile</span></div></footer>
+<script>
+const langButton = document.getElementById('language');
+langButton.addEventListener('click', () => {
+  const en = !document.documentElement.classList.contains('en');
+  document.documentElement.classList.toggle('en',en);
+  document.documentElement.lang = en ? 'en':'ar';
+  document.documentElement.dir = en ? 'ltr':'rtl';
+  langButton.textContent = en ? 'عربي':'EN';
+});
+document.getElementById('year').textContent = new Date().getFullYear();
+</script></body></html>
