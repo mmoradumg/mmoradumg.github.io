@@ -1,879 +1,122 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>United Murad Group | UMG</title>
-
-  <meta
-    name="description"
-    content="United Murad Group (UMG) — An Egyptian business group operating across industrial manufacturing, technology, construction, real estate, education and business services."
-  >
-
-  <meta name="author" content="United Murad Group">
-  <meta name="robots" content="index, follow">
-
-  <meta name="theme-color" content="#07090d">
-
-  <link rel="icon" type="image/png" href="assets/logo/favicon.png">
-  <link rel="apple-touch-icon" href="assets/logo/favicon.png">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="United Murad Group | UMG">
-  <meta
-    property="og:description"
-    content="United Murad Group — Industrial manufacturing, technology, construction, real estate and business services."
-  >
-  <meta property="og:url" content="https://mmoradumg.github.io/">
-  <meta property="og:site_name" content="United Murad Group">
-  <meta
-    property="og:image"
-    content="https://mmoradumg.github.io/assets/images/umg-social.jpg"
-  >
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
-    rel="stylesheet"
-  >
-
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#070c17">
+<title>UMG | United Murad Group — Industry, Technology & Software</title>
+<meta name="description" content="UMG — Murad United Group. Egyptian industrial, technology and business initiatives led by Mohamed Murad. Discover our software including DOLLAR, ERP and educational AI.">
+<meta name="author" content="UMG | Mohamed Murad">
+<meta property="og:type" content="website"><meta property="og:title" content="UMG — Ideas engineered for reality"><meta property="og:description" content="Industry, intelligent software and practical innovation."><meta property="og:url" content="https://umg-eg.com/">
+<link rel="canonical" href="https://umg-eg.com/">
+<link rel="icon" type="image/png" href="/assets/logo/favicon.png">
+<link rel="apple-touch-icon" href="/assets/logo/umg-logo.png">
+<style>
+:root{color-scheme:dark;--bg:#070c17;--panel:#101b2e;--txt:#f3f7ff;--muted:#9eafc9;--border:rgba(162,191,239,.18);--blue:#82acff;--cyan:#6af0ed;--violet:#9d93ff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 62% 36% at 15% 0,rgba(89,103,224,.15),transparent),radial-gradient(ellipse 60% 50% at 95% 29%,rgba(32,177,202,.11),transparent),var(--bg);color:var(--txt);line-height:1.7}
+a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%}.shell{max-width:1240px;margin:auto;padding:0 28px}
+header{height:80px;position:sticky;top:0;z-index:10;display:flex;align-items:center;background:rgba(7,12,23,.86);border-bottom:1px solid var(--border);backdrop-filter:blur(18px)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%}
+.logo{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:.07em;font-size:18px}.logo img{width:39px;height:39px;object-fit:contain}.logo small{font-size:10px;color:var(--muted);display:block;letter-spacing:.18em;font-weight:500}
+nav{display:flex;align-items:center;gap:27px;color:#c8d5e9;font-size:14px}nav a:hover{color:var(--cyan)}
+.tools{display:flex;align-items:center;gap:10px}.language{cursor:pointer;color:var(--txt);background:rgba(102,131,176,.14);border:1px solid var(--border);border-radius:11px;padding:9px 14px;font-size:12px;font-weight:750}
+.menu{display:none;cursor:pointer;color:var(--txt);background:transparent;border:1px solid var(--border);border-radius:10px;padding:7px 12px;font-size:21px}
+.hero{min-height:650px;padding:118px 0 110px;display:grid;grid-template-columns:1.12fr .88fr;gap:50px;align-items:center}
+.kicker{display:flex;align-items:center;gap:11px;color:var(--cyan);letter-spacing:.22em;font-size:12px;font-weight:850;text-transform:uppercase}
+.kicker:before{content:"";width:30px;height:1px;background:var(--cyan)}
+h1{font-size:clamp(3.3rem,6.8vw,6.6rem);letter-spacing:-.065em;line-height:1.1;margin:21px 0 18px;font-weight:850}
+.grad{background:linear-gradient(95deg,#f4f8ff 10%,#67e9ef 64%,#b3b7ff);background-clip:text;-webkit-background-clip:text;color:transparent}
+.lead{color:#cbd9eb;font-size:clamp(1.1rem,1.6vw,1.26rem);line-height:1.9;max-width:640px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:31px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:12px;font-weight:800;padding:13px 23px;font-size:14px;transition:transform .2s,filter .2s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.primary{background:linear-gradient(100deg,#72e9f0,#9c9eff);color:#070b18}
+.secondary{border:1px solid rgba(154,195,241,.3);background:rgba(31,48,73,.43)}
+.orbit{aspect-ratio:1;position:relative;display:grid;place-items:center;max-width:440px;width:100%;margin:auto;overflow:hidden;border-radius:50%;background:radial-gradient(circle at center,rgba(40,78,125,.4) 0 23%,transparent 70%)}
+.orbit:before,.orbit:after{content:"";position:absolute;inset:9%;border-radius:50%;border:1px solid rgba(121,202,247,.18);transform:rotate(-24deg) scaleY(.75)}
+.orbit:after{inset:24%;border-color:rgba(136,127,248,.32);transform:rotate(42deg) scaleX(.79)}
+.orbit-inner{display:grid;place-items:center;position:relative;z-index:1;width:53%;aspect-ratio:1;border-radius:35%;border:1px solid rgba(114,208,238,.3);background:linear-gradient(145deg,rgba(45,71,119,.44),rgba(22,29,57,.84));box-shadow:0 0 80px rgba(83,116,245,.18),inset 0 0 45px rgba(91,227,251,.08)}
+.orbit-inner strong{font-weight:900;font-size:clamp(2.7rem,6vw,4.9rem);letter-spacing:-.1em;background:linear-gradient(125deg,#edf8ff,#61dbef,#a294f9);color:transparent;background-clip:text;-webkit-background-clip:text}
+.orbit-inner small{font-size:10px;font-weight:700;color:#aebcd4;letter-spacing:.25em}
+.gridlines{position:absolute;inset:0;opacity:.33;background:repeating-linear-gradient(0deg,transparent 0 32px,rgba(101,160,221,.06) 33px 34px),repeating-linear-gradient(90deg,transparent 0 32px,rgba(101,160,221,.06) 33px 34px);mask-image:radial-gradient(circle,#000 5%,transparent 68%);pointer-events:none}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:24px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats .item{padding:11px 15px;border-inline-start:1px solid var(--border)}.stats b{display:block;font-size:14px;color:#eaf6ff;margin-bottom:4px}.stats span{font-size:12px;color:var(--muted)}
+.section{padding:105px 0 35px;scroll-margin-top:82px}.eyebrow{font-size:11px;letter-spacing:.19em;color:var(--cyan);font-weight:850;text-transform:uppercase}
+.section h2{font-size:clamp(2.1rem,4vw,3.5rem);line-height:1.25;letter-spacing:-.04em;margin:16px 0 13px}
+.intro{max-width:740px;color:var(--muted);margin:0 0 35px;font-size:16px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.card{border:1px solid var(--border);border-radius:21px;padding:28px;background:linear-gradient(145deg,rgba(29,45,75,.79),rgba(11,19,34,.86));min-height:242px;display:flex;flex-direction:column}
+.card:hover{border-color:rgba(120,221,240,.45)}.card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;color:#8fcbfa;font-size:12px;font-weight:800;letter-spacing:.12em}
+.status{font-weight:650;text-transform:none;letter-spacing:0;border-radius:100px;padding:4px 10px;border:1px solid rgba(167,191,229,.2);color:#b6c6dc;font-size:11px}
+.card h3{font-size:22px;line-height:1.24;margin:24px 0 9px;letter-spacing:-.025em}.card p{color:#a9b8cf;font-size:14px;line-height:1.85;margin:0 0 22px}.card a{margin-top:auto;align-self:flex-start;font-size:13px;font-weight:800;color:var(--cyan)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.pillar{border-inline-start:2px solid rgba(112,201,238,.42);padding:12px 23px}
+.pillar b{display:block;font-size:18px;margin-bottom:6px}.pillar p{font-size:14px;color:var(--muted);margin:0}
+.profile{display:flex;align-items:center;justify-content:space-between;gap:34px;padding:36px;border:1px solid rgba(142,173,240,.25);background:radial-gradient(ellipse at 0 0,rgba(89,89,219,.17),transparent 62%),#10192a;border-radius:24px}
+.profile h3{font-size:29px;margin:5px 0}.profile p{color:var(--muted);max-width:640px;margin:0}.profile .label{color:var(--cyan);font-size:11px;letter-spacing:.17em;font-weight:850}
+.contact{margin:90px 0 85px;padding:55px;border:1px solid rgba(114,200,237,.28);border-radius:24px;background:radial-gradient(ellipse at 100% 0,rgba(75,139,223,.21),transparent 65%),#101c30}
+.contact h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0 14px}.contact p{color:#b0c2da;margin:0 0 22px}
+.mail{display:inline-block;font-size:clamp(1.4rem,3.5vw,2rem);font-weight:800;direction:ltr;unicode-bidi:isolate;color:#9ceaf6}
+footer{border-top:1px solid var(--border);color:#91a1bb;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap;padding-top:27px;padding-bottom:28px}
+.footer-links{display:flex;gap:17px;flex-wrap:wrap}.footer-links a:hover{color:var(--cyan)}
+[data-language="en"]{display:none}html.en{direction:ltr}html.en [data-language="ar"]{display:none}html.en [data-language="en"]{display:initial}
+@media(max-width:960px){nav{gap:14px}.hero{gap:20px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){header{height:68px}.shell{padding:0 19px}.logo{font-size:15px}.logo img{width:32px;height:32px}.menu{display:block}nav{display:none;position:absolute;top:67px;left:0;right:0;background:#101a2c;padding:19px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--border)}nav.open{display:flex}.hero{grid-template-columns:1fr;min-height:0;padding:70px 0 53px}.orbit{max-width:245px}.stats{grid-template-columns:1fr;gap:0}.stats .item{border-inline-start:0;border-bottom:1px solid var(--border)}.stats .item:last-child{border-bottom:0}.section{padding:65px 0 18px;scroll-margin-top:75px}.cards,.pillars{grid-template-columns:1fr}.card{min-height:0}.profile{display:block;padding:23px}.profile .btn{margin-top:22px}.contact{padding:26px;margin:65px 0}.buttons .btn{flex:1}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
 </head>
-
 <body>
-
-<!-- =========================================================
-     HEADER
-========================================================= -->
-
-<header class="site-header">
-
-  <a href="#home" class="brand">
-
-    <div class="brand-mark">
-      <img src="assets/logo/umg-logo.png" alt="UMG">
-    </div>
-
-    <div class="brand-text">
-      <strong>UNITED MURAD GROUP</strong>
-      <span>UMG</span>
-    </div>
-
-  </a>
-
-  <nav class="main-nav">
-
-    <a href="#group" data-en="Group" data-ar="المجموعة">Group</a>
-
-    <a href="#sectors" data-en="Sectors" data-ar="القطاعات">Sectors</a>
-
-    <a href="#companies" data-en="Companies" data-ar="الشركات">Companies</a>
-
-    <a href="#vision" data-en="Vision" data-ar="الرؤية">Vision</a>
-
-    <a href="#leadership" data-en="Leadership" data-ar="الإدارة">Leadership</a>
-
-    <a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a>
-
-  </nav>
-
-  <button
-    id="languageToggle"
-    class="language-toggle"
-    type="button"
-  >
-    العربية
-  </button>
-
-</header>
-
-
-<!-- =========================================================
-     HERO
-========================================================= -->
-
-<main id="home">
-
-<section class="hero">
-
-  <div class="hero-media">
-
-    <img
-      src="assets/images/hero-industrial.jpg"
-      alt=""
-      aria-hidden="true"
-    >
-
-  </div>
-
-  <div class="hero-gradient"></div>
-
-  <div class="hero-grid"></div>
-
-  <div class="hero-content">
-
-    <div class="hero-kicker">
-      <span></span>
-      UNITED MURAD GROUP · UMG
-    </div>
-
-    <h1
-      data-en="Built to operate.<br>Designed to endure."
-      data-ar="نبني للتشغيل.<br>ونصنع للاستمرار."
-    >
-      Built to operate.
-      <br>
-      Designed to endure.
-    </h1>
-
-    <p
-      data-en="An Egyptian business group connecting industrial operations, technology, construction, real estate, education and business services."
-      data-ar="مجموعة أعمال مصرية تجمع بين الصناعة والتكنولوجيا والإنشاءات والعقارات والتعليم وخدمات الأعمال."
-    >
-      An Egyptian business group connecting industrial
-      operations, technology, construction, real estate,
-      education and business services.
-    </p>
-
-    <div class="hero-actions">
-
-      <a
-        href="#companies"
-        class="btn btn-primary"
-        data-en="Explore the Group"
-        data-ar="استكشف المجموعة"
-      >
-        Explore the Group
-      </a>
-
-      <a
-        href="#contact"
-        class="btn btn-outline"
-        data-en="Contact UMG"
-        data-ar="تواصل مع UMG"
-      >
-        Contact UMG
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <div class="hero-metric-panel">
-
-    <div>
-      <span>UMG</span>
-      <strong>01</strong>
-      <small>GROUP</small>
-    </div>
-
-    <div>
-      <span>EGYPT</span>
-      <strong>06</strong>
-      <small>SECTORS</small>
-    </div>
-
-    <div>
-      <span>2020</span>
-      <strong>∞</strong>
-      <small>VISION</small>
-    </div>
-
-  </div>
-
-
-  <div class="hero-scroll">
-    <span></span>
-    SCROLL TO EXPLORE
-  </div>
-
+<header><div class="shell header-inner">
+<a class="logo" href="/" aria-label="UMG home"><img src="/assets/logo/umg-logo.png" alt="UMG"><span>UMG<small>UNITED MURAD GROUP</small></span></a>
+<nav id="nav" aria-label="Main navigation">
+<a href="#about" data-language="ar">المجموعة</a><a href="#about" data-language="en">About</a>
+<a href="#sectors" data-language="ar">المجالات</a><a href="#sectors" data-language="en">Industries</a>
+<a href="#software" data-language="ar">البرامج</a><a href="#software" data-language="en">Software</a>
+<a href="/mohamed/" data-language="ar">المطور</a><a href="/mohamed/" data-language="en">Developer</a>
+<a href="#contact" data-language="ar">تواصل معنا</a><a href="#contact" data-language="en">Contact</a>
+</nav>
+<div class="tools"><button class="language" id="language" type="button" aria-label="Change language">EN</button><button class="menu" id="menu" aria-controls="nav" aria-expanded="false" aria-label="Open menu">☰</button></div>
+</div></header>
+<main class="shell">
+<section class="hero" id="home"><div>
+<div class="kicker">UMG / MURAD UNITED GROUP</div>
+<h1><span data-language="ar">أفكار تتحول<br><span class="grad">إلى واقع.</span></span><span data-language="en">Ideas built<br><span class="grad">for reality.</span></span></h1>
+<p class="lead" data-language="ar">من خطوط الإنتاج إلى التطبيقات الذكية: نوحّد الخبرة الصناعية بالتكنولوجيا لنصنع حلولًا عملية قابلة للتطوير.</p>
+<p class="lead" data-language="en">From production lines to intelligent software, we connect industrial experience with technology to build practical, scalable solutions.</p>
+<div class="buttons"><a class="btn primary" href="#software"><span data-language="ar">استكشف البرامج ←</span><span data-language="en">Explore software →</span></a><a class="btn secondary" href="#contact"><span data-language="ar">تواصل معنا</span><span data-language="en">Get in touch</span></a></div>
+</div><div class="orbit" aria-hidden="true"><div class="gridlines"></div><div class="orbit-inner"><div style="text-align:center"><strong>UMG.</strong><small style="display:block">VISION • BUILD • EVOLVE</small></div></div></div></section>
+<div class="stats"><div class="item"><b>INDUSTRY × TECHNOLOGY</b><span data-language="ar">من الخبرة التشغيلية إلى المنتجات الرقمية</span><span data-language="en">Bridging real operations and software</span></div><div class="item"><b>ARABIC × ENGLISH</b><span data-language="ar">تجربة ثنائية اللغة</span><span data-language="en">Bilingual digital experiences</span></div><div class="item"><b>EGYPTIAN ROOTS</b><span data-language="ar">من مصر إلى فرص عالمية</span><span data-language="en">Built in Egypt, designed to scale</span></div></div>
+<section class="section" id="about"><div class="eyebrow">ABOUT UMG / 01</div><h2><span data-language="ar">منظومة واحدة،<br>مجالات متعددة.</span><span data-language="en">One vision.<br>Multiple disciplines.</span></h2>
+<p class="intro" data-language="ar">مجموعة مراد المتحدة تعمل على تطوير مشروعات في الصناعة والخدمات والتقنية. هذه الصفحة تقدم أنشطتنا واتجاهات التطوير، بالإضافة إلى منصات برمجية يجري تطويرها واختبارها.</p>
+<p class="intro" data-language="en">United Murad Group develops initiatives across industry, business services and technology. This website introduces our activities and selected software products currently in development and testing.</p>
 </section>
-
-
-<!-- =========================================================
-     GROUP
-========================================================= -->
-
-<section id="group" class="section group-section">
-
-  <div class="section-topline">
-    <span>01</span>
-    <span data-en="THE GROUP" data-ar="المجموعة">THE GROUP</span>
-  </div>
-
-  <div class="section-intro">
-
-    <div>
-
-      <p class="section-eyebrow">
-        UNITED MURAD GROUP
-      </p>
-
-      <h2
-        data-en="One group.<br>Multiple capabilities."
-        data-ar="مجموعة واحدة.<br>قدرات متعددة."
-      >
-        One group.
-        <br>
-        Multiple capabilities.
-      </h2>
-
-    </div>
-
-    <div class="intro-copy">
-
-      <p
-        data-en="United Murad Group is built around operating businesses, practical execution and the development of capabilities that can scale across sectors."
-        data-ar="تقوم United Murad Group على إدارة الأعمال والتشغيل الفعلي والتنفيذ العملي وتطوير قدرات قابلة للتوسع عبر قطاعات متعددة."
-      >
-        United Murad Group is built around operating
-        businesses, practical execution and the development
-        of capabilities that can scale across sectors.
-      </p>
-
-      <p
-        data-en="The group connects industrial manufacturing with technology, construction, real estate, education and business services."
-        data-ar="وتربط المجموعة بين التصنيع الصناعي والتكنولوجيا والإنشاءات والعقارات والتعليم وخدمات الأعمال."
-      >
-        The group connects industrial manufacturing with
-        technology, construction, real estate, education
-        and business services.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     SECTORS
-========================================================= -->
-
-<section id="sectors" class="section dark-section">
-
-  <div class="section-topline">
-    <span>02</span>
-    <span data-en="SECTORS" data-ar="القطاعات">SECTORS</span>
-  </div>
-
-  <div class="section-title-row">
-
-    <h2
-      data-en="Capabilities<br>with operational depth."
-      data-ar="قدرات<br>بعمق تشغيلي."
-    >
-      Capabilities
-      <br>
-      with operational depth.
-    </h2>
-
-    <p
-      data-en="A diversified operating structure connecting physical production with digital and commercial capabilities."
-      data-ar="هيكل متنوع يربط الإنتاج الفعلي بالقدرات الرقمية والتجارية."
-    >
-      A diversified operating structure connecting physical
-      production with digital and commercial capabilities.
-    </p>
-
-  </div>
-
-
-  <div class="sector-grid">
-
-    <article class="sector-card">
-
-      <span>01</span>
-
-      <div>
-        <h3 data-en="Industrial" data-ar="الصناعة">Industrial</h3>
-
-        <p
-          data-en="Plastics, irrigation products, extrusion and carton manufacturing."
-          data-ar="البلاستيك ومنتجات الري والبثق وتصنيع الكرتون."
-        >
-          Plastics, irrigation products, extrusion and
-          carton manufacturing.
-        </p>
-      </div>
-
-      <b>↗</b>
-
-    </article>
-
-
-    <article class="sector-card">
-
-      <span>02</span>
-
-      <div>
-        <h3 data-en="Technology" data-ar="التكنولوجيا">Technology</h3>
-
-        <p
-          data-en="Software, digital transformation, artificial intelligence and operational systems."
-          data-ar="البرمجيات والتحول الرقمي والذكاء الاصطناعي والأنظمة التشغيلية."
-        >
-          Software, digital transformation, artificial
-          intelligence and operational systems.
-        </p>
-      </div>
-
-      <b>↗</b>
-
-    </article>
-
-
-    <article class="sector-card">
-
-      <span>03</span>
-
-      <div>
-        <h3 data-en="Construction" data-ar="الإنشاءات">Construction</h3>
-
-        <p
-          data-en="General contracting and project execution."
-          data-ar="المقاولات العامة وتنفيذ المشروعات."
-        >
-          General contracting and project execution.
-        </p>
-      </div>
-
-      <b>↗</b>
-
-    </article>
-
-
-    <article class="sector-card">
-
-      <span>04</span>
-
-      <div>
-        <h3 data-en="Real Estate" data-ar="العقارات">Real Estate</h3>
-
-        <p
-          data-en="Real-estate marketing and business development."
-          data-ar="التسويق العقاري وتطوير الأعمال."
-        >
-          Real-estate marketing and business development.
-        </p>
-      </div>
-
-      <b>↗</b>
-
-    </article>
-
-
-    <article class="sector-card">
-
-      <span>05</span>
-
-      <div>
-        <h3 data-en="Education" data-ar="التعليم">Education</h3>
-
-        <p
-          data-en="Professional learning and development."
-          data-ar="التعلم والتطوير المهني."
-        >
-          Professional learning and development.
-        </p>
-      </div>
-
-      <b>↗</b>
-
-    </article>
-
-
-    <article class="sector-card">
-
-      <span>06</span>
-
-      <div>
-        <h3 data-en="Business Services" data-ar="خدمات الأعمال">
-          Business Services
-        </h3>
-
-        <p
-          data-en="Integrated commercial and operational support."
-          data-ar="خدمات تجارية وتشغيلية متكاملة."
-        >
-          Integrated commercial and operational support.
-        </p>
-      </div>
-
-      <b>↗</b>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     COMPANIES
-========================================================= -->
-
-<section id="companies" class="section portfolio-section">
-
-  <div class="section-topline">
-    <span>03</span>
-    <span data-en="PORTFOLIO" data-ar="المحفظة">PORTFOLIO</span>
-  </div>
-
-  <div class="section-title-row">
-
-    <h2
-      data-en="Companies<br>& platforms."
-      data-ar="شركات<br>ومنصات."
-    >
-      Companies
-      <br>
-      & platforms.
-    </h2>
-
-  </div>
-
-
-  <div class="company-grid">
-
-    <a
-      href="https://github.com/mmoradumg/DOLLAR/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="company-card featured"
-    >
-
-      <div class="company-head">
-        <span>01</span>
-        <em>TECHNOLOGY · PRODUCT</em>
-      </div>
-
-      <div class="company-body">
-
-        <h3>DOLLAR</h3>
-
-        <p
-          data-en="Diagnostic and intelligence platform."
-          data-ar="منصة للتشخيص والذكاء التشغيلي."
-        >
-          Diagnostic and intelligence platform.
-        </p>
-
-      </div>
-
-      <div class="company-arrow">↗</div>
-
-    </a>
-
-
-    <a href="#contact" class="company-card">
-
-      <div class="company-head">
-        <span>02</span>
-        <em>INDUSTRIAL</em>
-      </div>
-
-      <div class="company-body">
-
-        <h3>UMG Plastics</h3>
-
-        <p
-          data-en="Plastic products and irrigation manufacturing."
-          data-ar="تصنيع المنتجات البلاستيكية ومنتجات الري."
-        >
-          Plastic products and irrigation manufacturing.
-        </p>
-
-      </div>
-
-      <div class="company-arrow">↗</div>
-
-    </a>
-
-
-    <a href="#contact" class="company-card">
-
-      <div class="company-head">
-        <span>03</span>
-        <em>INDUSTRIAL</em>
-      </div>
-
-      <div class="company-body">
-
-        <h3>Mira Carton</h3>
-
-        <p
-          data-en="Carton manufacturing operations."
-          data-ar="عمليات تصنيع الكرتون."
-        >
-          Carton manufacturing operations.
-        </p>
-
-      </div>
-
-      <div class="company-arrow">↗</div>
-
-    </a>
-
-
-    <a href="#contact" class="company-card">
-
-      <div class="company-head">
-        <span>04</span>
-        <em>TECHNOLOGY · AI</em>
-      </div>
-
-      <div class="company-body">
-
-        <h3>UMG Vision</h3>
-
-        <p
-          data-en="Vision AI, digital twin and predictive systems."
-          data-ar="الرؤية بالذكاء الاصطناعي والتوأم الرقمي والأنظمة التنبؤية."
-        >
-          Vision AI, digital twin and predictive systems.
-        </p>
-
-      </div>
-
-      <div class="company-arrow">↗</div>
-
-    </a>
-
-
-    <a href="#contact" class="company-card">
-
-      <div class="company-head">
-        <span>05</span>
-        <em>CONSTRUCTION</em>
-      </div>
-
-      <div class="company-body">
-
-        <h3>New Construction</h3>
-
-        <p
-          data-en="General contracting and construction services."
-          data-ar="المقاولات العامة وخدمات الإنشاءات."
-        >
-          General contracting and construction services.
-        </p>
-
-      </div>
-
-      <div class="company-arrow">↗</div>
-
-    </a>
-
-
-    <a href="#contact" class="company-card">
-
-      <div class="company-head">
-        <span>06</span>
-        <em>REAL ESTATE</em>
-      </div>
-
-      <div class="company-body">
-
-        <h3>New Egypt</h3>
-
-        <p
-          data-en="Real-estate marketing and business development."
-          data-ar="التسويق العقاري وتطوير الأعمال."
-        >
-          Real-estate marketing and business development.
-        </p>
-
-      </div>
-
-      <div class="company-arrow">↗</div>
-
-    </a>
-
-
-    <a href="#contact" class="company-card">
-
-      <div class="company-head">
-        <span>07</span>
-        <em>EDUCATION</em>
-      </div>
-
-      <div class="company-body">
-
-        <h3>New Vision Academy</h3>
-
-        <p
-          data-en="Professional learning and development."
-          data-ar="التعلم والتطوير المهني."
-        >
-          Professional learning and development.
-        </p>
-
-      </div>
-
-      <div class="company-arrow">↗</div>
-
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     VISION
-========================================================= -->
-
-<section id="vision" class="section vision-section">
-
-  <div class="section-topline">
-    <span>04</span>
-    <span data-en="VISION" data-ar="الرؤية">VISION</span>
-  </div>
-
-  <div class="vision-layout">
-
-    <div>
-
-      <p class="section-eyebrow">UMG · LONG TERM</p>
-
-      <h2
-        data-en="Build. Integrate.<br>Scale."
-        data-ar="نبني.<br>نتكامل.<br>نتوسع."
-      >
-        Build.
-        <br>
-        Integrate.
-        <br>
-        Scale.
-      </h2>
-
-    </div>
-
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-
-        <strong>2020</strong>
-
-        <span
-          data-en="Industrial foundation"
-          data-ar="الانطلاقة الصناعية"
-        >
-          Industrial foundation
-        </span>
-
-      </div>
-
-
-      <div class="timeline-item">
-
-        <strong>2024</strong>
-
-        <span
-          data-en="Carton manufacturing expansion"
-          data-ar="التوسع في تصنيع الكرتون"
-        >
-          Carton manufacturing expansion
-        </span>
-
-      </div>
-
-
-      <div class="timeline-item">
-
-        <strong>2026</strong>
-
-        <span
-          data-en="Technology and digital platforms"
-          data-ar="منصات التكنولوجيا والتحول الرقمي"
-        >
-          Technology and digital platforms
-        </span>
-
-      </div>
-
-
-      <div class="timeline-item">
-
-        <strong>2030</strong>
-
-        <span
-          data-en="Integrated group vision"
-          data-ar="رؤية المجموعة المتكاملة"
-        >
-          Integrated group vision
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     LEADERSHIP
-========================================================= -->
-
-<section id="leadership" class="leadership-section">
-
-  <div class="leadership-image">
-
-    <img
-      src="assets/images/chairman.jpg"
-      alt="Mohamed Murad"
-      loading="lazy"
-    >
-
-    <div class="image-frame"></div>
-
-  </div>
-
-
-  <div class="leadership-content">
-
-    <p class="section-eyebrow">
-      LEADERSHIP
-    </p>
-
-    <h2>
-      Mohamed Murad
-    </h2>
-
-    <p
-      class="leadership-title"
-      data-en="Chairman · United Murad Group"
-      data-ar="رئيس مجلس الإدارة · United Murad Group"
-    >
-      Chairman · United Murad Group
-    </p>
-
-    <div class="leadership-line"></div>
-
-    <p
-      class="leadership-description"
-      data-en="United Murad Group is structured around a long-term approach to operating businesses, developing capabilities and building an integrated portfolio."
-      data-ar="تقوم United Murad Group على رؤية طويلة الأجل لإدارة الأعمال وتطوير القدرات وبناء محفظة متكاملة."
-    >
-      United Murad Group is structured around a
-      long-term approach to operating businesses,
-      developing capabilities and building an
-      integrated portfolio.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     CONTACT
-========================================================= -->
-
-<section id="contact" class="section contact-section">
-
-  <div class="section-topline">
-    <span>05</span>
-    <span data-en="CONTACT" data-ar="اتصل بنا">CONTACT</span>
-  </div>
-
-  <div class="contact-heading">
-
-    <h2
-      data-en="Let's build<br>what comes next."
-      data-ar="لنبنِ معًا<br>ما يأتي بعد ذلك."
-    >
-      Let's build
-      <br>
-      what comes next.
-    </h2>
-
-  </div>
-
-
-  <div class="contact-grid">
-
-    <div class="contact-block">
-
-      <span>GROUP</span>
-
-      <strong>United Murad Group</strong>
-
-      <p>Egypt</p>
-
-    </div>
-
-
-    <div class="contact-block">
-
-      <span>EMAIL</span>
-
-      <a href="mailto:mmoradumg@gmail.com">
-        mmoradumg@gmail.com
-      </a>
-
-    </div>
-
-
-    <div class="contact-block">
-
-      <span>WEBSITE</span>
-
-      <a href="https://mmoradumg.github.io/" target="_blank">
-        mmoradumg.github.io
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
+<section class="section" id="sectors"><div class="eyebrow">CAPABILITIES / 02</div><h2><span data-language="ar">العمل على أرض الواقع.</span><span data-language="en">Real-world capabilities.</span></h2>
+<div class="pillars">
+<div class="pillar"><b data-language="ar">الصناعة والإنتاج</b><b data-language="en">Industrial production</b><p data-language="ar">عمليات التصنيع، المواد البلاستيكية والتطوير التشغيلي.</p><p data-language="en">Manufacturing operations, plastics and process improvement.</p></div>
+<div class="pillar"><b data-language="ar">الأعمال والإدارة</b><b data-language="en">Business operations</b><p data-language="ar">تطوير العمليات المحاسبية والإدارية وتحويلها إلى أنظمة مترابطة.</p><p data-language="en">Connected accounting, operations and business workflows.</p></div>
+<div class="pillar"><b data-language="ar">البرمجيات والذكاء الاصطناعي</b><b data-language="en">Software & artificial intelligence</b><p data-language="ar">حلول تشخيصية وتعليمية وأنظمة تشغيل ومتابعة ذكية.</p><p data-language="en">Diagnostic, educational and operational intelligence tools.</p></div>
+</div></section>
+<section class="section" id="software"><div class="eyebrow">DIGITAL PRODUCTS / 03</div><h2><span data-language="ar">برامج نعمل على بنائها.</span><span data-language="en">Software in the making.</span></h2>
+<p class="intro" data-language="ar">البرامج التالية في مراحل تطوير أو اختبار مختلفة، ولا تعني إتاحتها هنا أنها منشورة تجاريًا أو معتمدة من متاجر التطبيقات.</p>
+<p class="intro" data-language="en">These products are at different development and testing stages. Listing a product does not imply commercial availability or app-store approval.</p>
+<div class="cards">
+<article class="card"><div class="card-top"><span>01 / DIAGNOSTICS</span><span class="status">PRIVATE TESTING</span></div><h3>DOLLAR</h3><p data-language="ar">مساعد ذكي لتشخيص أعطال السيارات والمعدات باستخدام الأعراض والصور والصوت والبيانات الفنية.</p><p data-language="en">AI-assisted vehicle and equipment diagnostics using symptoms, images, audio and technical data.</p><a href="/apps/dollar/"><span data-language="ar">التفاصيل والدعم ←</span><span data-language="en">Product & support →</span></a></article>
+<article class="card"><div class="card-top"><span>02 / BUSINESS</span><span class="status">IN DEVELOPMENT</span></div><h3>UMG ERP</h3><p data-language="ar">إدارة الحسابات والخزينة والمخازن والمشتريات والموارد البشرية والتصنيع من منصة واحدة.</p><p data-language="en">Integrated finance, treasury, inventory, purchasing, HR and manufacturing operations.</p><a href="mailto:gm@umg-eg.com?subject=UMG%20ERP"><span data-language="ar">استفسار عن المشروع ←</span><span data-language="en">Ask about the project →</span></a></article>
+<article class="card"><div class="card-top"><span>03 / EDUCATION</span><span class="status">IN DEVELOPMENT</span></div><h3>UMG Know AI</h3><p data-language="ar">مساعد تعليمي ثنائي اللغة لتصفح المحتوى الدراسي، طرح الأسئلة، والتدرب على الاختبارات.</p><p data-language="en">Bilingual study assistant with curriculum discovery, question answering and practice quizzes.</p><a href="mailto:gm@umg-eg.com?subject=UMG%20Know%20AI"><span data-language="ar">استفسار عن المشروع ←</span><span data-language="en">Ask about the project →</span></a></article>
+</div></section>
+<section class="section" id="developer"><div class="eyebrow">LEADERSHIP / 04</div><div class="profile"><div><span class="label">MOHAMED MURAD</span><h3><span data-language="ar">محمد مراد</span><span data-language="en">Mohamed Murad</span></h3><p data-language="ar">المدير التنفيذي لمجموعة مراد المتحدة، ومهتم بتطوير برمجيات الذكاء الاصطناعي والتطبيقات العملية. له صفحة تعريفية مستقلة بصفته الشخصية كمطور.</p><p data-language="en">CEO of United Murad Group with a focus on software, intelligent systems and practical digital products. His independent developer profile is available separately.</p></div><a class="btn secondary" href="/mohamed/"><span data-language="ar">الصفحة الشخصية ←</span><span data-language="en">Developer profile →</span></a></div></section>
+<section class="contact" id="contact"><div class="eyebrow">GET IN TOUCH / 05</div><h2><span data-language="ar">تواصل مع UMG</span><span data-language="en">Contact UMG</span></h2><p data-language="ar">للاستفسارات العامة والتواصل المهني والدعم المتعلق بالمشروعات، راسلنا مباشرة على البريد الإلكتروني.</p><p data-language="en">For professional enquiries and product-related questions, send us an email.</p><a class="mail" href="mailto:gm@umg-eg.com">gm@umg-eg.com ↗</a></section>
 </main>
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer class="site-footer">
-
-  <div class="footer-brand">
-
-    <img src="assets/logo/umg-logo.png" alt="UMG">
-
-    <div>
-      <strong>UNITED MURAD GROUP</strong>
-      <span>UMG</span>
-    </div>
-
-  </div>
-
-
-  <div class="footer-meta">
-
-    <span>© 2026 United Murad Group</span>
-
-    <span>EGYPT</span>
-
-  </div>
-
-</footer>
-
-
-<script src="script.js"></script>
-
-</body>
-</html>
+<footer><div class="shell footer-inner"><div>© <span id="year">2026</span> UMG · United Murad Group</div><div class="footer-links"><a href="/mohamed/">Mohamed Murad</a><a href="/apps/dollar/">DOLLAR</a><a href="/apps/dollar/support/">Support</a><a href="/apps/dollar/privacy/">Privacy</a><a href="mailto:gm@umg-eg.com">Email</a></div></div></footer>
+<script>
+(function(){
+ const root=document.documentElement,btn=document.getElementById('language'),menu=document.getElementById('menu'),nav=document.getElementById('nav');
+ function setLanguage(lang){const en=lang==='en';root.classList.toggle('en',en);root.lang=lang;root.dir=en?'ltr':'rtl';btn.textContent=en?'عربي':'EN';try{localStorage.setItem('umg-lang',lang)}catch(e){}}
+ let initial='ar';try{initial=localStorage.getItem('umg-lang')||'ar'}catch(e){}setLanguage(initial==='en'?'en':'ar');
+ btn.addEventListener('click',()=>setLanguage(root.lang==='ar'?'en':'ar'));
+ menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close menu':'Open menu')});
+ nav.querySelectorAll('a').forEach(x=>x.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+ document.getElementById('year').textContent=String(new Date().getFullYear());
+})();
+</script>
+</body></html>
