@@ -39,6 +39,19 @@ footer{border-top:1px solid var(--edge);padding:29px 0;color:var(--muted);font-s
 @media(max-width:750px){nav{height:66px}.links a:not(.lang){display:none}.hero{grid-template-columns:1fr;gap:32px;padding:65px 0 55px}.monogram{max-width:235px;width:100%;justify-self:start}.grid{grid-template-columns:1fr}.card{min-height:0}.contact{padding:24px}.shell{padding:0 20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
 .monogram{overflow:hidden}.monogram img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 42%;border-radius:inherit}
+
+/* Approved portrait treatment and personal vision — neon cinematic styling */
+.hero{background:radial-gradient(ellipse at 84% 37%,rgba(78,58,194,.13),transparent 53%)}
+.monogram{position:relative;isolation:isolate;overflow:hidden;border-radius:37px;padding:14px;border:2px solid rgba(128,155,255,.88);background:linear-gradient(138deg,rgba(36,30,99,.97),rgba(16,33,65,.96));box-shadow:0 0 0 6px rgba(67,85,197,.07),0 0 27px rgba(96,77,254,.69),0 0 64px rgba(54,151,255,.25),0 0 100px rgba(130,72,221,.18),inset 0 0 28px rgba(130,192,255,.16);animation:profileGlow 8s ease-in-out infinite}
+.monogram:before{content:"";position:absolute;inset:5px;border-radius:30px;border:1px solid rgba(163,117,255,.85);box-shadow:0 0 14px rgba(102,210,255,.54),inset 0 0 13px rgba(129,78,255,.52);z-index:2;pointer-events:none}
+.monogram:after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;border-radius:inherit;box-shadow:inset 0 0 23px rgba(100,70,255,.42)}
+.monogram img{display:block;position:relative;width:100%;height:100%;object-fit:cover;object-position:center 42%;border-radius:23px;filter:saturate(1.07);z-index:1}
+@keyframes profileGlow{50%{box-shadow:0 0 0 6px rgba(67,85,197,.09),0 0 35px rgba(88,193,255,.67),0 0 73px rgba(139,76,255,.35),0 0 100px rgba(130,72,221,.15),inset 0 0 28px rgba(130,192,255,.16)}}
+.credo{display:block;border-radius:19px;margin:24px 0 5px;padding:18px 23px;border:1px solid rgba(144,118,251,.41);background:linear-gradient(110deg,rgba(64,46,149,.22),rgba(13,31,53,.72));box-shadow:0 0 23px rgba(78,64,242,.11);font-size:clamp(1.06rem,2vw,1.4rem);font-weight:800;line-height:1.8;color:#eef3ff}
+.credo strong{background:linear-gradient(110deg,#eaafff,#a8ceff,#90e6ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media(max-width:750px){.monogram{max-width:310px;width:100%;justify-self:center;padding:12px}.credo{font-size:1.05rem;padding:15px 17px;margin-top:20px}}
+@media(prefers-reduced-motion:reduce){.monogram{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -52,6 +65,7 @@ footer{border-top:1px solid var(--edge);padding:29px 0;color:var(--muted);font-s
 <h1><span lang="ar">محمد <span class="grad">مراد</span></span><span lang="en">Mohmd <span class="grad">Murad</span></span></h1>
 <div class="lead"><span lang="ar">برمجيات ذكية. أنظمة عملية. حلول تبدأ من الفكرة وتصل إلى التطبيق.</span><span lang="en">Intelligent software. Practical systems. From concept to working products.</span></div>
 <p class="note"><span lang="ar">اهتمامي يجمع بين هندسة البرمجيات والذكاء الاصطناعي والتحول الرقمي للعمليات الصناعية والتجارية، مع التركيز على بناء منتجات قابلة للاستخدام.</span><span lang="en">My work spans software engineering, artificial intelligence, and digital systems for industrial and business operations, with a focus on usable products.</span></p>
+<div class="credo"><span lang="ar"><strong>الخيال حقيقة…</strong> وواقع أمامك حين تقرر أن تراه.</span><span lang="en"><strong>Imagination becomes reality</strong> when you choose to see it.</span></div>
 <div class="actions">
 <a class="btn btn-primary" href="#work"><span lang="ar">اكتشف مجالات عملي ←</span><span lang="en">Explore my work →</span></a>
 <a class="btn btn-secondary" href="https://github.com/mmoradumg" rel="noopener"><span lang="ar">حسابي على GitHub</span><span lang="en">My GitHub</span></a>
