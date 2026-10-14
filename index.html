@@ -1,122 +1,238 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#070c17">
-<title>UMG | United Murad Group — Industry, Technology & Software</title>
-<meta name="description" content="UMG — Murad United Group. Egyptian industrial, technology and business initiatives led by Mohamed Murad. Discover our software including DOLLAR, ERP and educational AI.">
-<meta name="author" content="UMG | Mohamed Murad">
-<meta property="og:type" content="website"><meta property="og:title" content="UMG — Ideas engineered for reality"><meta property="og:description" content="Industry, intelligent software and practical innovation."><meta property="og:url" content="https://umg-eg.com/">
+<meta name="theme-color" content="#08091b">
+<meta name="description" content="UMG | Murad United Group — a creative universe bridging real-world manufacturing, AI, software and future-facing ideas.">
+<meta property="og:type" content="website"><meta property="og:title" content="UMG — The Future Takes Shape"><meta property="og:description" content="Where industrial intelligence meets extraordinary ideas."><meta property="og:url" content="https://umg-eg.com/">
 <link rel="canonical" href="https://umg-eg.com/">
 <link rel="icon" type="image/png" href="/assets/logo/favicon.png">
 <link rel="apple-touch-icon" href="/assets/logo/umg-logo.png">
+<title>UMG — The Future Takes Shape</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{color-scheme:dark;--bg:#070c17;--panel:#101b2e;--txt:#f3f7ff;--muted:#9eafc9;--border:rgba(162,191,239,.18);--blue:#82acff;--cyan:#6af0ed;--violet:#9d93ff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 62% 36% at 15% 0,rgba(89,103,224,.15),transparent),radial-gradient(ellipse 60% 50% at 95% 29%,rgba(32,177,202,.11),transparent),var(--bg);color:var(--txt);line-height:1.7}
-a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%}.shell{max-width:1240px;margin:auto;padding:0 28px}
-header{height:80px;position:sticky;top:0;z-index:10;display:flex;align-items:center;background:rgba(7,12,23,.86);border-bottom:1px solid var(--border);backdrop-filter:blur(18px)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%}
-.logo{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:.07em;font-size:18px}.logo img{width:39px;height:39px;object-fit:contain}.logo small{font-size:10px;color:var(--muted);display:block;letter-spacing:.18em;font-weight:500}
-nav{display:flex;align-items:center;gap:27px;color:#c8d5e9;font-size:14px}nav a:hover{color:var(--cyan)}
-.tools{display:flex;align-items:center;gap:10px}.language{cursor:pointer;color:var(--txt);background:rgba(102,131,176,.14);border:1px solid var(--border);border-radius:11px;padding:9px 14px;font-size:12px;font-weight:750}
-.menu{display:none;cursor:pointer;color:var(--txt);background:transparent;border:1px solid var(--border);border-radius:10px;padding:7px 12px;font-size:21px}
-.hero{min-height:650px;padding:118px 0 110px;display:grid;grid-template-columns:1.12fr .88fr;gap:50px;align-items:center}
-.kicker{display:flex;align-items:center;gap:11px;color:var(--cyan);letter-spacing:.22em;font-size:12px;font-weight:850;text-transform:uppercase}
-.kicker:before{content:"";width:30px;height:1px;background:var(--cyan)}
-h1{font-size:clamp(3.3rem,6.8vw,6.6rem);letter-spacing:-.065em;line-height:1.1;margin:21px 0 18px;font-weight:850}
-.grad{background:linear-gradient(95deg,#f4f8ff 10%,#67e9ef 64%,#b3b7ff);background-clip:text;-webkit-background-clip:text;color:transparent}
-.lead{color:#cbd9eb;font-size:clamp(1.1rem,1.6vw,1.26rem);line-height:1.9;max-width:640px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:31px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:12px;font-weight:800;padding:13px 23px;font-size:14px;transition:transform .2s,filter .2s}
-.btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
-.primary{background:linear-gradient(100deg,#72e9f0,#9c9eff);color:#070b18}
-.secondary{border:1px solid rgba(154,195,241,.3);background:rgba(31,48,73,.43)}
-.orbit{aspect-ratio:1;position:relative;display:grid;place-items:center;max-width:440px;width:100%;margin:auto;overflow:hidden;border-radius:50%;background:radial-gradient(circle at center,rgba(40,78,125,.4) 0 23%,transparent 70%)}
-.orbit:before,.orbit:after{content:"";position:absolute;inset:9%;border-radius:50%;border:1px solid rgba(121,202,247,.18);transform:rotate(-24deg) scaleY(.75)}
-.orbit:after{inset:24%;border-color:rgba(136,127,248,.32);transform:rotate(42deg) scaleX(.79)}
-.orbit-inner{display:grid;place-items:center;position:relative;z-index:1;width:53%;aspect-ratio:1;border-radius:35%;border:1px solid rgba(114,208,238,.3);background:linear-gradient(145deg,rgba(45,71,119,.44),rgba(22,29,57,.84));box-shadow:0 0 80px rgba(83,116,245,.18),inset 0 0 45px rgba(91,227,251,.08)}
-.orbit-inner strong{font-weight:900;font-size:clamp(2.7rem,6vw,4.9rem);letter-spacing:-.1em;background:linear-gradient(125deg,#edf8ff,#61dbef,#a294f9);color:transparent;background-clip:text;-webkit-background-clip:text}
-.orbit-inner small{font-size:10px;font-weight:700;color:#aebcd4;letter-spacing:.25em}
-.gridlines{position:absolute;inset:0;opacity:.33;background:repeating-linear-gradient(0deg,transparent 0 32px,rgba(101,160,221,.06) 33px 34px),repeating-linear-gradient(90deg,transparent 0 32px,rgba(101,160,221,.06) 33px 34px);mask-image:radial-gradient(circle,#000 5%,transparent 68%);pointer-events:none}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:24px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.stats .item{padding:11px 15px;border-inline-start:1px solid var(--border)}.stats b{display:block;font-size:14px;color:#eaf6ff;margin-bottom:4px}.stats span{font-size:12px;color:var(--muted)}
-.section{padding:105px 0 35px;scroll-margin-top:82px}.eyebrow{font-size:11px;letter-spacing:.19em;color:var(--cyan);font-weight:850;text-transform:uppercase}
-.section h2{font-size:clamp(2.1rem,4vw,3.5rem);line-height:1.25;letter-spacing:-.04em;margin:16px 0 13px}
-.intro{max-width:740px;color:var(--muted);margin:0 0 35px;font-size:16px}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
-.card{border:1px solid var(--border);border-radius:21px;padding:28px;background:linear-gradient(145deg,rgba(29,45,75,.79),rgba(11,19,34,.86));min-height:242px;display:flex;flex-direction:column}
-.card:hover{border-color:rgba(120,221,240,.45)}.card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;color:#8fcbfa;font-size:12px;font-weight:800;letter-spacing:.12em}
-.status{font-weight:650;text-transform:none;letter-spacing:0;border-radius:100px;padding:4px 10px;border:1px solid rgba(167,191,229,.2);color:#b6c6dc;font-size:11px}
-.card h3{font-size:22px;line-height:1.24;margin:24px 0 9px;letter-spacing:-.025em}.card p{color:#a9b8cf;font-size:14px;line-height:1.85;margin:0 0 22px}.card a{margin-top:auto;align-self:flex-start;font-size:13px;font-weight:800;color:var(--cyan)}
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.pillar{border-inline-start:2px solid rgba(112,201,238,.42);padding:12px 23px}
-.pillar b{display:block;font-size:18px;margin-bottom:6px}.pillar p{font-size:14px;color:var(--muted);margin:0}
-.profile{display:flex;align-items:center;justify-content:space-between;gap:34px;padding:36px;border:1px solid rgba(142,173,240,.25);background:radial-gradient(ellipse at 0 0,rgba(89,89,219,.17),transparent 62%),#10192a;border-radius:24px}
-.profile h3{font-size:29px;margin:5px 0}.profile p{color:var(--muted);max-width:640px;margin:0}.profile .label{color:var(--cyan);font-size:11px;letter-spacing:.17em;font-weight:850}
-.contact{margin:90px 0 85px;padding:55px;border:1px solid rgba(114,200,237,.28);border-radius:24px;background:radial-gradient(ellipse at 100% 0,rgba(75,139,223,.21),transparent 65%),#101c30}
-.contact h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0 14px}.contact p{color:#b0c2da;margin:0 0 22px}
-.mail{display:inline-block;font-size:clamp(1.4rem,3.5vw,2rem);font-weight:800;direction:ltr;unicode-bidi:isolate;color:#9ceaf6}
-footer{border-top:1px solid var(--border);color:#91a1bb;font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap;padding-top:27px;padding-bottom:28px}
-.footer-links{display:flex;gap:17px;flex-wrap:wrap}.footer-links a:hover{color:var(--cyan)}
-[data-language="en"]{display:none}html.en{direction:ltr}html.en [data-language="ar"]{display:none}html.en [data-language="en"]{display:initial}
-@media(max-width:960px){nav{gap:14px}.hero{gap:20px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:720px){header{height:68px}.shell{padding:0 19px}.logo{font-size:15px}.logo img{width:32px;height:32px}.menu{display:block}nav{display:none;position:absolute;top:67px;left:0;right:0;background:#101a2c;padding:19px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--border)}nav.open{display:flex}.hero{grid-template-columns:1fr;min-height:0;padding:70px 0 53px}.orbit{max-width:245px}.stats{grid-template-columns:1fr;gap:0}.stats .item{border-inline-start:0;border-bottom:1px solid var(--border)}.stats .item:last-child{border-bottom:0}.section{padding:65px 0 18px;scroll-margin-top:75px}.cards,.pillars{grid-template-columns:1fr}.card{min-height:0}.profile{display:block;padding:23px}.profile .btn{margin-top:22px}.contact{padding:26px;margin:65px 0}.buttons .btn{flex:1}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+:root{color-scheme:dark;--ink:#f8f8ff;--dim:#bab9d1;--dark:#090919;--stroke:rgba(255,255,255,.15);--cyan:#83fbff;--pink:#ff89d8;--purple:#a295ff;--orange:#ffc68b;--green:#9effd7;--page:1250px;font-family:"IBM Plex Sans Arabic","Manrope",system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#080816;color:var(--ink);overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}::selection{background:#9d8aff;color:#090919}
+.container{width:min(var(--page),calc(100% - 84px));margin-inline:auto}
+#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#65e7fd,#e68cfa,#ffc17f);z-index:200;width:0;pointer-events:none}
+.topbar{position:fixed;top:0;inset-inline:0;z-index:60;padding:18px 0;transition:background .3s,backdrop-filter .3s}
+.topbar.is-scrolled{background:rgba(8,8,23,.72);backdrop-filter:blur(23px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:inline-flex;align-items:center;gap:10px;font-family:Manrope,sans-serif;font-weight:800;font-size:26px;letter-spacing:-.095em;white-space:nowrap}
+.brand-mark{display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(255,255,255,.32);border-radius:13px;background:linear-gradient(142deg,rgba(255,255,255,.27),rgba(139,112,255,.1));box-shadow:inset 0 1px rgba(255,255,255,.25);font-size:11px;letter-spacing:-.06em}
+.brand-mark b{background:linear-gradient(120deg,#fff,#8de8ff,#ffa4ea);-webkit-background-clip:text;background-clip:text;color:transparent}
+.desktop-links{display:flex;align-items:center;gap:30px;font-weight:650;font-size:13px;color:rgba(255,255,255,.77)}.desktop-links a{transition:color .2s}.desktop-links a:hover{color:white}
+.nav-tools{display:flex;gap:12px;align-items:center}.language{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.07);cursor:pointer;padding:8px 15px;border-radius:99px;font:800 11px Manrope,sans-serif;min-width:65px}.nav-contact{background:white;color:#18122b;padding:11px 19px;border-radius:99px;font-weight:800;font-size:12px;white-space:nowrap}
+.hamburger{display:none;background:rgba(255,255,255,.1);border:1px solid var(--stroke);border-radius:50%;width:40px;height:40px;cursor:pointer}
+.mobile-menu{display:none}
+.hero{position:relative;min-height:930px;isolation:isolate;overflow:hidden;background:#08081b;padding-top:125px}
+.hero::before{content:"";position:absolute;inset:0;z-index:-5;background:radial-gradient(ellipse 54% 65% at 81% 44%,rgba(91,87,226,.38),transparent 82%),radial-gradient(ellipse 39% 44% at 2% 14%,rgba(55,111,237,.3),transparent 78%),radial-gradient(ellipse 34% 37% at 51% 90%,rgba(218,82,165,.19),transparent 80%)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-3;background:linear-gradient(0deg,#080816 0,transparent 25%,transparent 75%,rgba(5,6,20,.3) 100%);pointer-events:none}
+.aurora{position:absolute;z-index:-4;pointer-events:none;filter:blur(70px);opacity:.5;border-radius:50%;animation:floatAurora 15s ease-in-out infinite alternate}
+.aurora-a{width:600px;height:520px;top:100px;right:-150px;background:radial-gradient(circle,#9470ff,transparent 65%)}
+.aurora-b{width:520px;height:480px;bottom:0;left:-120px;background:radial-gradient(circle,#fd72cb,transparent 69%);animation-delay:-8s}
+.aurora-c{width:360px;height:380px;top:200px;left:35%;background:radial-gradient(circle,#3bacff,transparent 70%);animation-delay:-4s}
+@keyframes floatAurora{to{transform:translate3d(12%,8%,0) scale(1.2)}}
+.glass-grain{position:absolute;inset:0;opacity:.19;z-index:-2;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}
+.hero-layout{display:grid;grid-template-columns:.93fr 1.07fr;align-items:center;gap:14px;min-height:680px}
+.hero-copy{position:relative;z-index:8;padding-bottom:30px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;letter-spacing:.26em;font:700 11px Manrope,sans-serif;color:#ececff;text-transform:uppercase}
+.glow-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 17px var(--cyan)}
+h1,h2,h3,p{margin-top:0}
+.hero h1{font-weight:700;line-height:1.16;font-size:clamp(57px,6.4vw,101px);letter-spacing:-.075em;margin:31px 0 20px;text-wrap:balance}
+.grad-text{background:linear-gradient(95deg,#ffd9c8 0%,#fd96c9 25%,#bd97ff 52%,#82e8fe 82%,#abfff1 100%);-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200% 100%;animation:gradFlow 8s ease-in-out infinite alternate}
+@keyframes gradFlow{to{background-position:100% 0}}
+.hero-description{max-width:505px;line-height:1.95;color:#c2bfd6;font-size:clamp(15px,1.3vw,18px);margin-bottom:32px}
+.hero-buttons{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.primary-btn{display:inline-flex;align-items:center;justify-content:center;gap:16px;background:white;color:#100f25;padding:16px 24px;border-radius:99px;font-weight:800;font-size:13px;box-shadow:0 12px 35px rgba(5,5,19,.25);transition:transform .25s,box-shadow .25s}.primary-btn:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(179,165,255,.2)}
+.ghost-btn{display:inline-flex;align-items:center;gap:14px;border:1px solid rgba(255,255,255,.28);padding:15px 24px;border-radius:99px;background:rgba(255,255,255,.06);backdrop-filter:blur(8px);font-weight:650;font-size:13px;transition:background .2s}.ghost-btn:hover{background:rgba(255,255,255,.15)}
+.hero-micro{margin-top:50px;display:flex;align-items:center;gap:14px;font:700 10px Manrope,sans-serif;letter-spacing:.17em;color:#9997be;text-transform:uppercase}
+.hero-micro i{display:block;width:52px;height:1px;background:rgba(255,255,255,.37)}
+/* Kinetic visual stage */
+.kinetic{position:relative;width:min(100%,640px);aspect-ratio:1/1.05;justify-self:end;perspective:1500px;touch-action:pan-y}
+.stage-glow{position:absolute;inset:7% -10% 3%;background:conic-gradient(from 20deg,rgba(81,186,254,.5),rgba(234,93,180,.55),rgba(226,133,91,.4),rgba(107,91,229,.7),rgba(81,186,254,.5));filter:blur(72px);opacity:.5;border-radius:50%;animation:rotateGlow 22s linear infinite}
+@keyframes rotateGlow{to{transform:rotate(360deg)}}
+.stage-shadow{position:absolute;inset:18% 0 0;border-radius:50%;background:radial-gradient(ellipse,rgba(2,2,16,.7),transparent 70%);transform:translateY(20%) scaleX(.75);filter:blur(25px)}
+.flipbox{position:absolute;inset:5% 5% 12%;border-radius:34px;transform-style:preserve-3d;transform:rotate(-7deg) rotateY(-9deg) rotateX(5deg);transition:transform .75s cubic-bezier(.22,1,.36,1),box-shadow .6s;box-shadow:0 42px 100px rgba(0,0,20,.6),inset 0 0 2px rgba(255,255,255,.7);cursor:grab}
+.flipbox.is-flipping{transform:rotate(3deg) rotateY(88deg) scale(.88)!important}
+.poster{position:absolute;inset:0;overflow:hidden;border-radius:34px;border:1px solid rgba(255,255,255,.49);background:linear-gradient(145deg,#454ceb,#d772ef,#ffac95);backface-visibility:hidden;isolation:isolate;box-shadow:inset 0 3px rgba(255,255,255,.34)}
+.poster:before{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:linear-gradient(142deg,rgba(255,255,255,.22),transparent 25% 77%,rgba(0,0,0,.28)),linear-gradient(0deg,rgba(5,4,34,.54),transparent 42%);border-radius:inherit}
+.poster:after{content:"";position:absolute;inset:9px;border:1px solid rgba(255,255,255,.16);border-radius:27px;z-index:5;pointer-events:none}
+.scene{position:absolute;inset:0;opacity:0;visibility:hidden;transform:scale(1.08);transition:opacity .55s,transform .85s;overflow:hidden}.scene.active{opacity:1;visibility:visible;transform:scale(1)}
+.scene-1{background:radial-gradient(circle at 73% 23%,#f9b1cd 0,#df75d4 27%,transparent 53%),radial-gradient(circle at 12% 85%,#5bd8f9,transparent 55%),linear-gradient(125deg,#273ce3,#a062f3 50%,#f69bad)}
+.scene-2{background:radial-gradient(circle at 20% 15%,#ffe5b0,transparent 48%),radial-gradient(circle at 83% 70%,#ff616e,transparent 50%),linear-gradient(135deg,#dd8274,#f2ba8a 40%,#3c66c4)}
+.scene-3{background:radial-gradient(circle at 83% 7%,#b6ffe6,transparent 43%),radial-gradient(circle at 12% 84%,#d5a1fd,transparent 53%),linear-gradient(138deg,#386bd4,#6eb7da 47%,#7a64ea)}
+.scene .beam{position:absolute;width:140%;height:25%;left:-20%;top:27%;transform:rotate(-28deg);background:linear-gradient(0deg,transparent,rgba(255,255,255,.32),transparent);filter:blur(13px)}
+.scene-grid{position:absolute;inset:0;opacity:.38;background:repeating-linear-gradient(0deg,transparent 0 48px,rgba(255,255,255,.17) 49px 50px),repeating-linear-gradient(90deg,transparent 0 48px,rgba(255,255,255,.14) 49px 50px);mask-image:linear-gradient(0deg,transparent,black 44% 100%);transform:perspective(500px) rotateX(43deg) scale(1.5) translateY(16%)}
+.art-orb{position:absolute;width:66%;aspect-ratio:1;left:17%;top:15%;border-radius:45% 55% 48% 52%;background:conic-gradient(from 55deg,#c9f8ff,#5fc1ff,#7767fa,#e8a4ff,#ffe8c2,#c9f8ff);box-shadow:inset -30px -30px 55px rgba(32,8,114,.34),inset 25px 25px 42px rgba(255,255,255,.68),0 28px 55px rgba(58,47,158,.34);animation:orbFloat 8s ease-in-out infinite}
+.art-orb:before{content:"";position:absolute;inset:17%;border-radius:inherit;background:linear-gradient(135deg,rgba(255,255,255,.94),rgba(119,218,255,.15) 45%,rgba(106,31,224,.4));filter:blur(4px);box-shadow:inset 10px 10px 30px rgba(255,255,255,.75)}
+.art-orb:after{content:"";position:absolute;inset:38%;border-radius:50%;background:#2830a6;box-shadow:0 0 33px 22px rgba(44,33,150,.55),inset 0 0 20px #f4ccff}
+@keyframes orbFloat{50%{transform:translateY(-17px) rotate(14deg);border-radius:55% 45% 56% 44%}}
+.ring{position:absolute;width:93%;height:30%;left:3.5%;top:35%;border:17px solid rgba(239,241,255,.7);border-top-color:rgba(255,255,255,.97);border-bottom-color:rgba(91,50,214,.72);border-radius:50%;transform:rotate(-24deg);filter:drop-shadow(0 12px 13px rgba(47,27,110,.2));animation:ringMove 10s ease-in-out infinite;z-index:2}
+@keyframes ringMove{50%{transform:rotate(-17deg) translateY(-9px)}}
+.art-orb-mini{position:absolute;right:10%;top:14%;width:21%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 25% 18%,white,#fff5dd 18%,#fcadf3 38%,#9558e5 75%);box-shadow:0 10px 25px #8a3cba55;z-index:3}
+.cylinder{position:absolute;border-radius:50% 50% 37% 37%;background:linear-gradient(110deg,#fce0d0,#ffa968 19%,#ea5466 43%,#b751f2 76%,#6fd0fa 100%);box-shadow:inset 14px 0 30px rgba(255,255,255,.65),inset -15px -8px 32px rgba(91,36,131,.4),0 30px 44px #6a2a6155;transform:rotate(-25deg);animation:cylinderFloat 8s ease-in-out infinite}
+.cyl-one{width:40%;height:75%;top:5%;right:25%}.cyl-two{width:24%;height:56%;top:27%;right:56%;animation-delay:-3s;background:linear-gradient(112deg,#fffed9,#e8b8ff 30%,#659bf8 70%,#3b61b4)}.cyl-three{width:23%;height:47%;top:22%;right:5%;animation-delay:-6s;background:linear-gradient(110deg,#fff3b6,#ec88a0 45%,#7b62d0)}
+@keyframes cylinderFloat{50%{transform:translateY(-16px) rotate(-18deg)}}
+.sparkle{position:absolute;width:10px;height:10px;border-radius:50%;background:white;box-shadow:0 0 18px 9px rgba(255,255,255,.7);z-index:2}
+.sp1{top:24%;left:21%}.sp2{right:12%;top:63%;width:6px;height:6px}
+.glass-screen{position:absolute;inset:16% 15% 27%;border-radius:22px;background:linear-gradient(150deg,rgba(255,255,255,.75),rgba(208,240,255,.32));box-shadow:25px 28px 50px rgba(17,45,117,.34),inset 1px 1px rgba(255,255,255,.9);backdrop-filter:blur(10px);transform:rotate(-11deg) skew(1deg,2deg);border:1px solid rgba(255,255,255,.8);padding:8%;display:flex;flex-direction:column;gap:8px;animation:screenFloat 7s ease-in-out infinite}
+@keyframes screenFloat{50%{transform:rotate(-8deg) translateY(-13px)}}
+.glass-title{height:8px;width:38%;border-radius:20px;background:rgba(39,75,156,.44)}
+.glass-chart{height:57%;display:flex;align-items:end;gap:6%;padding-top:10%}
+.glass-chart i{flex:1;border-radius:10px 10px 3px 3px;background:linear-gradient(0deg,#5f67e8,#73f1ff);box-shadow:0 0 20px rgba(85,222,247,.25);height:var(--h)}
+.glass-dash{height:7px;border-radius:20px;background:rgba(61,90,173,.25);width:var(--w)}
+.float-tile{position:absolute;width:26%;aspect-ratio:1;right:4%;top:13%;background:linear-gradient(130deg,#ffeffe,#c7b8ff 50%,#70baf7);border:1px solid white;border-radius:26px;transform:rotate(17deg);box-shadow:0 14px 34px rgba(18,53,109,.36)}
+.float-tile:after{content:"✦";position:absolute;top:10%;right:20%;font-size:clamp(46px,6vw,80px);color:#6960c8}
+.poster-top,.poster-bottom{position:absolute;left:34px;right:34px;z-index:8;display:flex;justify-content:space-between;align-items:center;direction:ltr}
+.poster-top{top:31px}.poster-bottom{bottom:29px;align-items:end}
+.poster-top small{font:900 10px Manrope,sans-serif;letter-spacing:.22em}.poster-top .tag{border:1px solid rgba(255,255,255,.55);border-radius:100px;padding:6px 10px;font:800 9px Manrope,sans-serif;letter-spacing:.12em;background:rgba(255,255,255,.13)}
+.poster-bottom strong{font:800 clamp(28px,4vw,53px)/1.07 Manrope,sans-serif;letter-spacing:-.07em;text-shadow:0 3px 18px rgba(0,0,0,.17)}
+.poster-bottom span{font:800 10px Manrope,sans-serif;letter-spacing:.1em;white-space:nowrap}
+.poster-light{position:absolute;inset:-1px;pointer-events:none;background:linear-gradient(112deg,rgba(255,255,255,.23),transparent 37%);z-index:7}
+.floater{position:absolute;z-index:9;padding:12px 17px;border-radius:15px;backdrop-filter:blur(17px);background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.38);box-shadow:0 17px 42px rgba(20,13,71,.25);font:800 10px Manrope,sans-serif;letter-spacing:.13em;white-space:nowrap;animation:badgeFloat 7s ease-in-out infinite}
+.float-one{top:11%;right:0;transform:rotate(7deg)}.float-two{bottom:22%;left:-2%;animation-delay:-3.2s;transform:rotate(-8deg)}
+@keyframes badgeFloat{50%{translate:0 -13px}}
+.scene-controls{display:flex;position:absolute;bottom:3%;left:50%;transform:translateX(-50%);z-index:14;align-items:center;gap:15px;direction:ltr}
+.scene-controls button{display:grid;place-items:center;width:37px;height:37px;border:1px solid rgba(255,255,255,.4);border-radius:50%;background:rgba(15,13,47,.22);backdrop-filter:blur(10px);cursor:pointer;font-size:22px;transition:background .2s}.scene-controls button:hover{background:rgba(255,255,255,.23)}
+.dots{display:flex;gap:7px}.dots button{display:block;width:7px;height:7px;background:rgba(255,255,255,.43);padding:0;border:0;border-radius:15px;transition:width .3s,background .3s}.dots button.active{width:32px;background:white}
+.scrollhint{padding-top:10px;display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.13);font:700 10px Manrope,sans-serif;letter-spacing:.18em;color:#9e9cb7;height:65px;position:relative;z-index:4;direction:ltr}
+.scrollhint .arrow{font-size:22px;color:white}
+.marquee{overflow:hidden;background:linear-gradient(90deg,#9e95ff,#c5a0ff 26%,#ffacba 65%,#ffc89c);color:#241338;transform:rotate(-2deg) scale(1.035);margin:30px 0 110px;box-shadow:0 15px 60px rgba(219,151,250,.1)}
+.marquee-track{display:flex;align-items:center;gap:43px;white-space:nowrap;font:800 15px Manrope,sans-serif;padding:20px 0;min-width:max-content;animation:marquee 25s linear infinite;letter-spacing:.1em}.marquee-track b{font-size:20px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.section{padding:50px 0 115px;scroll-margin-top:105px}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:39px}
+.sec-overline{font:800 11px Manrope,sans-serif;letter-spacing:.22em;color:#aaa1ff}
+.sec-title{font-size:clamp(43px,5.2vw,74px);line-height:1.2;letter-spacing:-.075em;font-weight:700;margin:16px 0 0}.sec-note{max-width:335px;color:#a4a1be;line-height:1.85;font-size:14px}
+.portfolio{display:grid;grid-template-columns:1.16fr .84fr;gap:18px;grid-auto-rows:minmax(295px,auto)}
+.work-card{position:relative;overflow:hidden;border-radius:30px;min-height:360px;display:flex;flex-direction:column;justify-content:space-between;padding:30px 33px;isolation:isolate;border:1px solid rgba(255,255,255,.18);transition:transform .35s cubic-bezier(.22,1,.36,1),border .35s}
+.work-card:hover{transform:translateY(-7px);border-color:rgba(255,255,255,.47)}
+.work-card.one{grid-row:span 2;min-height:715px;background:radial-gradient(circle at 75% 46%,#7057e3 0,#433eb1 29%,transparent 58%),radial-gradient(circle at 5% 8%,#c958b4,transparent 50%),linear-gradient(130deg,#1c174e,#161641)}
+.work-card.two{background:radial-gradient(circle at 80% 66%,#fdb983 0,#e98798 33%,transparent 68%),linear-gradient(140deg,#553988,#9563c0)}
+.work-card.three{background:radial-gradient(circle at 85% 75%,#74d8da 0,#54a8ca 28%,transparent 60%),linear-gradient(140deg,#194e8b,#263a8e)}
+.w-top{z-index:3;display:flex;justify-content:space-between;align-items:center;font:800 11px Manrope,sans-serif;letter-spacing:.13em;direction:ltr}
+.w-top .idx{border:1px solid rgba(255,255,255,.48);border-radius:99px;padding:7px 12px}
+.w-bottom{z-index:3}.w-bottom h3{font:800 clamp(33px,3.8vw,62px)/1.12 Manrope,sans-serif;letter-spacing:-.06em;margin:0 0 10px}
+.w-bottom p{font-size:13px;max-width:460px;line-height:1.8;color:rgba(255,255,255,.84);margin:0 0 17px}.w-bottom a{font-size:13px;font-weight:800;border-bottom:1px solid rgba(255,255,255,.75);padding-bottom:6px}
+.card-art{position:absolute;pointer-events:none;z-index:1}
+.one .card-art{width:110%;aspect-ratio:1;top:16%;left:-3%;border-radius:50%;background:conic-gradient(from 10deg,#8e83ff,#94eafb,#dcbdff,#e779e9,#8e83ff);box-shadow:inset 38px 35px 80px #ffffff8c,inset -33px -33px 70px #4e1e9eab,0 25px 80px #10004166;mask-image:radial-gradient(circle,transparent 0 26%,black 29% 62%,transparent 65%);transform:rotate(-22deg);animation:artSpin 26s linear infinite}
+@keyframes artSpin{to{transform:rotate(338deg)}}
+.two .card-art{width:52%;aspect-ratio:1;top:17%;right:11%;border-radius:35%;background:linear-gradient(135deg,#ffe9d5,#e4b0ea 49%,#668ef4);box-shadow:inset 8px 11px 35px #fff,0 18px 45px #69386d88;transform:rotate(-23deg)}
+.two .card-art:after{content:"✦";position:absolute;inset:0;display:grid;place-items:center;font-size:80px;color:#685acf}
+.three .card-art{width:52%;aspect-ratio:1;top:13%;right:9%;border-radius:49%;background:radial-gradient(circle at 27% 25%,#eeffff,#6ef7f7 32%,#5667d8 70%,#282bb1);box-shadow:inset -13px -15px 30px #2f43a8,0 25px 45px #05387988}
+.about-band{background:linear-gradient(135deg,#e9d9ff,#c0d9ff 40%,#b8f5f0 74%,#ffe2c5);color:#17132e;position:relative;overflow:hidden;padding:120px 0;margin:0 0 80px}
+.about-band:before{content:"";position:absolute;width:400px;height:400px;right:-80px;top:-170px;border:60px solid rgba(255,255,255,.5);border-radius:50%;filter:blur(4px)}
+.about-flex{display:flex;justify-content:space-between;align-items:center;gap:55px;position:relative}.about-band h2{font-size:clamp(44px,6.4vw,84px);line-height:1.15;letter-spacing:-.08em;margin:20px 0;max-width:730px}.about-band p{max-width:440px;font-size:17px;line-height:1.9;color:#45425a}
+.about-band .lightbtn{display:inline-block;padding:14px 25px;background:#1b153a;color:white;border-radius:99px;font-weight:800;font-size:12px;margin-top:10px}
+.about-symbol{font:900 clamp(90px,15vw,210px)/1 Manrope,sans-serif;letter-spacing:-.15em;opacity:.22;transform:rotate(-14deg);white-space:nowrap}
+.contact-section{padding:70px 0 130px;text-align:center}.contact-section .sec-title{font-size:clamp(46px,6vw,88px)}.contact-section p{color:#a5a1bf;line-height:1.9;font-size:15px;margin:24px auto 31px;max-width:560px}
+.email-link{display:inline-block;font:800 clamp(23px,4vw,48px) Manrope,sans-serif;letter-spacing:-.055em;background:linear-gradient(110deg,#f8a9d3,#b7b0ff,#7ee7ff);color:transparent;background-clip:text;-webkit-background-clip:text;direction:ltr;unicode-bidi:isolate}
+.footer{padding:32px 0;border-top:1px solid var(--stroke)}.foot-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:22px;color:#a6a2c0;font:650 11px Manrope,sans-serif;letter-spacing:.05em}
+.foot-links{display:flex;flex-wrap:wrap;gap:20px}.foot-links a:hover{color:white}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}.reveal.visible{opacity:1;transform:translateY(0)}
+[data-lang=en]{display:none}html.en{direction:ltr}html.en [data-lang=ar]{display:none}html.en [data-lang=en]{display:initial}html.en .hero-layout{direction:ltr}html.en .poster-bottom{direction:ltr}
+@media(max-width:1100px){.container{width:calc(100% - 50px)}.desktop-links{gap:18px}.hero-layout{grid-template-columns:1fr 1fr}.hero h1{font-size:clamp(49px,6.1vw,78px)}.flipbox{inset:10% 2% 19%}.kinetic{align-self:center}}
+@media(max-width:760px){
+.container{width:calc(100% - 40px)}.topbar{padding:12px 0}.brand{font-size:21px}.brand-mark{width:37px;height:37px}.desktop-links,.nav-contact{display:none}.hamburger{display:block}.mobile-menu{position:absolute;top:68px;left:15px;right:15px;padding:24px;border:1px solid rgba(255,255,255,.26);border-radius:23px;background:rgba(22,20,55,.94);backdrop-filter:blur(22px);box-shadow:0 25px 60px rgba(0,0,0,.3);z-index:70;flex-direction:column;gap:16px;font-size:18px;font-weight:700}.mobile-menu.open{display:flex}.hero{min-height:0;padding-top:92px}.hero-layout{display:flex;flex-direction:column;gap:4px;min-height:0}.hero-copy{width:100%;padding:0}.hero h1{font-size:clamp(51px,12.4vw,81px);margin:23px 0 13px;line-height:1.17}.hero-description{font-size:14px;max-width:430px;line-height:1.85;margin-bottom:22px}.hero-buttons{gap:8px}.primary-btn,.ghost-btn{font-size:12px;padding:12px 17px}.hero-micro{display:none}.kinetic{width:min(100%,470px);align-self:center;aspect-ratio:1/.99;margin-top:8px;margin-bottom:26px}.flipbox{inset:7% 8% 10%;border-radius:26px;transform:rotate(-6deg) rotateY(-8deg) rotateX(5deg)}.poster{border-radius:25px}.poster:after{inset:6px;border-radius:21px}.floater{font-size:8px;padding:9px 12px}.float-one{top:6%;right:0}.float-two{bottom:21%;left:0}.poster-top,.poster-bottom{left:21px;right:21px}.poster-top{top:21px}.poster-bottom{bottom:20px}.poster-bottom strong{font-size:clamp(25px,7.5vw,44px)}.poster-top small{font-size:8px}.poster-top .tag{font-size:8px}.scene-controls{bottom:-1%}.scrollhint{height:52px}.marquee{margin:27px 0 65px}.marquee-track{padding:16px 0;font-size:12px;gap:25px}.section{padding:40px 0 78px}.sec-head{display:block}.sec-title{font-size:clamp(39px,11vw,63px)}.sec-note{margin-top:16px;font-size:13px}.portfolio{display:grid;grid-template-columns:1fr;gap:15px}.work-card.one{grid-row:auto;min-height:465px}.work-card{min-height:315px;border-radius:25px;padding:25px}.one .card-art{width:95%;top:-5%;left:4%}.two .card-art,.three .card-art{top:5%;width:45%}.w-bottom h3{font-size:39px}.about-band{padding:70px 0;margin-bottom:30px}.about-flex{display:block}.about-band h2{font-size:clamp(39px,10.5vw,64px)}.about-symbol{display:none}.contact-section{padding:60px 0 90px}.contact-section .sec-title{font-size:clamp(43px,11vw,68px)}.footer{padding:28px 0}.foot-inner{gap:23px}
+}
+@media(max-width:360px){.hero h1{font-size:46px}.hero-buttons{flex-wrap:wrap}.primary-btn,.ghost-btn{width:100%}.poster-bottom strong{font-size:24px}.kinetic{margin-top:2px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<header><div class="shell header-inner">
-<a class="logo" href="/" aria-label="UMG home"><img src="/assets/logo/umg-logo.png" alt="UMG"><span>UMG<small>UNITED MURAD GROUP</small></span></a>
-<nav id="nav" aria-label="Main navigation">
-<a href="#about" data-language="ar">المجموعة</a><a href="#about" data-language="en">About</a>
-<a href="#sectors" data-language="ar">المجالات</a><a href="#sectors" data-language="en">Industries</a>
-<a href="#software" data-language="ar">البرامج</a><a href="#software" data-language="en">Software</a>
-<a href="/mohamed/" data-language="ar">المطور</a><a href="/mohamed/" data-language="en">Developer</a>
-<a href="#contact" data-language="ar">تواصل معنا</a><a href="#contact" data-language="en">Contact</a>
+<div id="progress" aria-hidden="true"></div>
+<header class="topbar" id="topbar">
+<div class="container nav-inner">
+<a href="/" class="brand" aria-label="UMG home"><span class="brand-mark"><b>U M</b></span>UMG<span style="font-size:8px;letter-spacing:.2em;opacity:.55;margin-inline-start:4px">STUDIO</span></a>
+<nav class="desktop-links" aria-label="Main">
+<a href="#universes"><span data-lang="ar">مشروعاتنا</span><span data-lang="en">Our worlds</span></a>
+<a href="#approach"><span data-lang="ar">رؤيتنا</span><span data-lang="en">Our vision</span></a>
+<a href="/mohamed/"><span data-lang="ar">المطور</span><span data-lang="en">Developer</span></a>
+<a href="/apps/dollar/"><span data-lang="ar">DOLLAR</span><span data-lang="en">DOLLAR</span></a>
 </nav>
-<div class="tools"><button class="language" id="language" type="button" aria-label="Change language">EN</button><button class="menu" id="menu" aria-controls="nav" aria-expanded="false" aria-label="Open menu">☰</button></div>
-</div></header>
-<main class="shell">
-<section class="hero" id="home"><div>
-<div class="kicker">UMG / MURAD UNITED GROUP</div>
-<h1><span data-language="ar">أفكار تتحول<br><span class="grad">إلى واقع.</span></span><span data-language="en">Ideas built<br><span class="grad">for reality.</span></span></h1>
-<p class="lead" data-language="ar">من خطوط الإنتاج إلى التطبيقات الذكية: نوحّد الخبرة الصناعية بالتكنولوجيا لنصنع حلولًا عملية قابلة للتطوير.</p>
-<p class="lead" data-language="en">From production lines to intelligent software, we connect industrial experience with technology to build practical, scalable solutions.</p>
-<div class="buttons"><a class="btn primary" href="#software"><span data-language="ar">استكشف البرامج ←</span><span data-language="en">Explore software →</span></a><a class="btn secondary" href="#contact"><span data-language="ar">تواصل معنا</span><span data-language="en">Get in touch</span></a></div>
-</div><div class="orbit" aria-hidden="true"><div class="gridlines"></div><div class="orbit-inner"><div style="text-align:center"><strong>UMG.</strong><small style="display:block">VISION • BUILD • EVOLVE</small></div></div></div></section>
-<div class="stats"><div class="item"><b>INDUSTRY × TECHNOLOGY</b><span data-language="ar">من الخبرة التشغيلية إلى المنتجات الرقمية</span><span data-language="en">Bridging real operations and software</span></div><div class="item"><b>ARABIC × ENGLISH</b><span data-language="ar">تجربة ثنائية اللغة</span><span data-language="en">Bilingual digital experiences</span></div><div class="item"><b>EGYPTIAN ROOTS</b><span data-language="ar">من مصر إلى فرص عالمية</span><span data-language="en">Built in Egypt, designed to scale</span></div></div>
-<section class="section" id="about"><div class="eyebrow">ABOUT UMG / 01</div><h2><span data-language="ar">منظومة واحدة،<br>مجالات متعددة.</span><span data-language="en">One vision.<br>Multiple disciplines.</span></h2>
-<p class="intro" data-language="ar">مجموعة مراد المتحدة تعمل على تطوير مشروعات في الصناعة والخدمات والتقنية. هذه الصفحة تقدم أنشطتنا واتجاهات التطوير، بالإضافة إلى منصات برمجية يجري تطويرها واختبارها.</p>
-<p class="intro" data-language="en">United Murad Group develops initiatives across industry, business services and technology. This website introduces our activities and selected software products currently in development and testing.</p>
+<div class="nav-tools"><button type="button" class="language" id="language" aria-label="Change language">EN</button><a href="mailto:gm@umg-eg.com" class="nav-contact"><span data-lang="ar">تواصل معنا ↗</span><span data-lang="en">Get in touch ↗</span></a><button type="button" class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu">☰</button></div>
+</div><nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation"><a href="#universes"><span data-lang="ar">مشروعاتنا</span><span data-lang="en">Our worlds</span></a><a href="#approach"><span data-lang="ar">رؤيتنا</span><span data-lang="en">Our vision</span></a><a href="/mohamed/"><span data-lang="ar">المطور</span><span data-lang="en">Developer</span></a><a href="/apps/dollar/">DOLLAR</a><a href="mailto:gm@umg-eg.com"><span data-lang="ar">تواصل معنا</span><span data-lang="en">Contact</span></a></nav>
+</header>
+<main>
+<section class="hero" id="home">
+<div class="aurora aurora-a"></div><div class="aurora aurora-b"></div><div class="aurora aurora-c"></div><div class="glass-grain"></div>
+<div class="container hero-layout">
+<div class="hero-copy">
+<div class="eyebrow"><i class="glow-dot"></i><span>THE NEXT CHAPTER IS HERE</span></div>
+<h1><span data-lang="ar">المستقبل<br>بيغيّر <span class="grad-text">شكله.</span></span><span data-lang="en">The future<br>changes <span class="grad-text">shape.</span></span></h1>
+<p class="hero-description" data-lang="ar">مش مجرد موقع شركة. دي مساحة نعرض فيها اللي بنبنيه: ذكاء اصطناعي، صناعة حقيقية، وبرامج بتحوّل الأفكار لمنتجات ملموسة.</p>
+<p class="hero-description" data-lang="en">More than a corporate website. A living space for everything we're building: intelligent software, real-world industry and ideas made tangible.</p>
+<div class="hero-buttons"><a class="primary-btn" href="#universes"><span data-lang="ar">استكشف العالم بتاعنا</span><span data-lang="en">Explore our worlds</span><span>↗</span></a><a class="ghost-btn" href="/apps/dollar/"><span data-lang="ar">اكتشف DOLLAR</span><span data-lang="en">Meet DOLLAR</span><span>→</span></a></div>
+<div class="hero-micro">A SPACE FOR IDEAS IN MOTION <i></i> 2026</div>
+</div>
+<div class="kinetic" id="kinetic" aria-label="Interactive visual gallery, swipe left or right to change scenes">
+<div class="stage-glow"></div><div class="stage-shadow"></div>
+<div class="flipbox" id="flipbox" tabindex="0" role="button" aria-label="Change visual scene" aria-describedby="scene-caption">
+<div class="poster" id="poster">
+<div class="scene scene-1 active" data-scene="0"><div class="beam"></div><div class="scene-grid"></div><div class="art-orb"></div><div class="ring"></div><div class="art-orb-mini"></div><i class="sparkle sp1"></i><i class="sparkle sp2"></i></div>
+<div class="scene scene-2" data-scene="1"><div class="beam"></div><div class="scene-grid"></div><div class="cylinder cyl-one"></div><div class="cylinder cyl-two"></div><div class="cylinder cyl-three"></div><i class="sparkle sp1"></i></div>
+<div class="scene scene-3" data-scene="2"><div class="beam"></div><div class="scene-grid"></div><div class="glass-screen"><div class="glass-title"></div><div class="glass-chart"><i style="--h:48%"></i><i style="--h:79%"></i><i style="--h:62%"></i><i style="--h:93%"></i><i style="--h:69%"></i></div><div class="glass-dash" style="--w:84%"></div><div class="glass-dash" style="--w:59%"></div></div><div class="float-tile"></div></div>
+<div class="poster-light"></div>
+<div class="poster-top"><small>UMG / IMAGINATION LAB</small><span class="tag" id="scene-tag">01 / INTELLIGENCE</span></div>
+<div class="poster-bottom"><strong id="scene-title">BEYOND<br>THE EXPECTED.</strong><span id="scene-counter">01 / 03</span></div>
+</div></div>
+<div class="floater float-one">✦ &nbsp; MADE TO MOVE</div><div class="floater float-two">FUTURE / NOW &nbsp; ✧</div>
+<div class="scene-controls"><button type="button" id="prevScene" aria-label="Previous image">‹</button><div class="dots" id="sceneDots"><button type="button" class="active" aria-label="Image 1" aria-current="true"></button><button type="button" aria-label="Image 2"></button><button type="button" aria-label="Image 3"></button></div><button type="button" id="nextScene" aria-label="Next image">›</button></div>
+<p id="scene-caption" style="position:absolute;opacity:0;pointer-events:none">An interactive card flips to reveal three vividly colored concepts.</p>
+</div></div>
+<div class="container scrollhint"><span>SCROLL TO EXPLORE</span><span class="arrow">↓</span></div>
 </section>
-<section class="section" id="sectors"><div class="eyebrow">CAPABILITIES / 02</div><h2><span data-language="ar">العمل على أرض الواقع.</span><span data-language="en">Real-world capabilities.</span></h2>
-<div class="pillars">
-<div class="pillar"><b data-language="ar">الصناعة والإنتاج</b><b data-language="en">Industrial production</b><p data-language="ar">عمليات التصنيع، المواد البلاستيكية والتطوير التشغيلي.</p><p data-language="en">Manufacturing operations, plastics and process improvement.</p></div>
-<div class="pillar"><b data-language="ar">الأعمال والإدارة</b><b data-language="en">Business operations</b><p data-language="ar">تطوير العمليات المحاسبية والإدارية وتحويلها إلى أنظمة مترابطة.</p><p data-language="en">Connected accounting, operations and business workflows.</p></div>
-<div class="pillar"><b data-language="ar">البرمجيات والذكاء الاصطناعي</b><b data-language="en">Software & artificial intelligence</b><p data-language="ar">حلول تشخيصية وتعليمية وأنظمة تشغيل ومتابعة ذكية.</p><p data-language="en">Diagnostic, educational and operational intelligence tools.</p></div>
+<div class="marquee" aria-label="What we create"><div class="marquee-track" aria-hidden="true"><span>ARTIFICIAL INTELLIGENCE</span><b>✦</b><span>INDUSTRIAL THINKING</span><b>✧</b><span>CREATIVE TECHNOLOGY</span><b>✦</b><span>IDEAS IN MOTION</span><b>✧</b><span>ARTIFICIAL INTELLIGENCE</span><b>✦</b><span>INDUSTRIAL THINKING</span><b>✧</b><span>CREATIVE TECHNOLOGY</span><b>✦</b><span>IDEAS IN MOTION</span><b>✧</b></div></div>
+<section class="section container" id="universes">
+<div class="sec-head reveal"><div><div class="sec-overline">01 / THE UMG UNIVERSE</div><h2 class="sec-title"><span data-lang="ar">عالمنا مش<br><span class="grad-text">عالم واحد.</span></span><span data-lang="en">Not just one<br><span class="grad-text">kind of world.</span></span></h2></div><p class="sec-note" data-lang="ar">3 مسارات بتتقاطع: تشخيص ذكي، نظم أعمال، وتعليم بالذكاء الاصطناعي. كل مشروع له فكرة وتجربة مختلفة.</p><p class="sec-note" data-lang="en">Three intersecting directions: intelligent diagnostics, business systems and AI-assisted learning.</p></div>
+<div class="portfolio">
+<article class="work-card one reveal"><div class="card-art"></div><div class="w-top"><span>AI DIAGNOSTICS</span><span class="idx">01</span></div><div class="w-bottom"><h3>DOLLAR.</h3><p data-lang="ar">ذكاء تشخيصي للسيارات والمعدات — من الأعراض والأدلة لخطوة الفحص التالية. إصدار تجريبي قيد الاختبار.</p><p data-lang="en">Diagnostic intelligence for vehicles and equipment. From symptoms and evidence to the next smart test. In private beta.</p><a href="/apps/dollar/"><span data-lang="ar">اكتشف DOLLAR ↗</span><span data-lang="en">Discover DOLLAR ↗</span></a></div></article>
+<article class="work-card two reveal"><div class="card-art"></div><div class="w-top"><span>BUSINESS OS</span><span class="idx">02</span></div><div class="w-bottom"><h3>UMG ERP.</h3><p data-lang="ar">منظومة تشغيل وإدارة تربط الحسابات والمخازن والتصنيع. قيد التطوير.</p><p data-lang="en">An operating platform connecting finance, inventory and manufacturing. In development.</p><a href="mailto:gm@umg-eg.com?subject=UMG%20ERP"><span data-lang="ar">اعرف أكتر ↗</span><span data-lang="en">Learn more ↗</span></a></div></article>
+<article class="work-card three reveal"><div class="card-art"></div><div class="w-top"><span>LEARNING INTELLIGENCE</span><span class="idx">03</span></div><div class="w-bottom"><h3>KNOW AI.</h3><p data-lang="ar">تعلّم أذكى: أسئلة، شرح وتدريب بواجهة عربية وإنجليزية. قيد التطوير.</p><p data-lang="en">A smarter learning companion with questions, lessons and quizzes. In development.</p><a href="mailto:gm@umg-eg.com?subject=UMG%20Know%20AI"><span data-lang="ar">اعرف أكتر ↗</span><span data-lang="en">Learn more ↗</span></a></div></article>
 </div></section>
-<section class="section" id="software"><div class="eyebrow">DIGITAL PRODUCTS / 03</div><h2><span data-language="ar">برامج نعمل على بنائها.</span><span data-language="en">Software in the making.</span></h2>
-<p class="intro" data-language="ar">البرامج التالية في مراحل تطوير أو اختبار مختلفة، ولا تعني إتاحتها هنا أنها منشورة تجاريًا أو معتمدة من متاجر التطبيقات.</p>
-<p class="intro" data-language="en">These products are at different development and testing stages. Listing a product does not imply commercial availability or app-store approval.</p>
-<div class="cards">
-<article class="card"><div class="card-top"><span>01 / DIAGNOSTICS</span><span class="status">PRIVATE TESTING</span></div><h3>DOLLAR</h3><p data-language="ar">مساعد ذكي لتشخيص أعطال السيارات والمعدات باستخدام الأعراض والصور والصوت والبيانات الفنية.</p><p data-language="en">AI-assisted vehicle and equipment diagnostics using symptoms, images, audio and technical data.</p><a href="/apps/dollar/"><span data-language="ar">التفاصيل والدعم ←</span><span data-language="en">Product & support →</span></a></article>
-<article class="card"><div class="card-top"><span>02 / BUSINESS</span><span class="status">IN DEVELOPMENT</span></div><h3>UMG ERP</h3><p data-language="ar">إدارة الحسابات والخزينة والمخازن والمشتريات والموارد البشرية والتصنيع من منصة واحدة.</p><p data-language="en">Integrated finance, treasury, inventory, purchasing, HR and manufacturing operations.</p><a href="mailto:gm@umg-eg.com?subject=UMG%20ERP"><span data-language="ar">استفسار عن المشروع ←</span><span data-language="en">Ask about the project →</span></a></article>
-<article class="card"><div class="card-top"><span>03 / EDUCATION</span><span class="status">IN DEVELOPMENT</span></div><h3>UMG Know AI</h3><p data-language="ar">مساعد تعليمي ثنائي اللغة لتصفح المحتوى الدراسي، طرح الأسئلة، والتدرب على الاختبارات.</p><p data-language="en">Bilingual study assistant with curriculum discovery, question answering and practice quizzes.</p><a href="mailto:gm@umg-eg.com?subject=UMG%20Know%20AI"><span data-language="ar">استفسار عن المشروع ←</span><span data-language="en">Ask about the project →</span></a></article>
-</div></section>
-<section class="section" id="developer"><div class="eyebrow">LEADERSHIP / 04</div><div class="profile"><div><span class="label">MOHAMED MURAD</span><h3><span data-language="ar">محمد مراد</span><span data-language="en">Mohamed Murad</span></h3><p data-language="ar">المدير التنفيذي لمجموعة مراد المتحدة، ومهتم بتطوير برمجيات الذكاء الاصطناعي والتطبيقات العملية. له صفحة تعريفية مستقلة بصفته الشخصية كمطور.</p><p data-language="en">CEO of United Murad Group with a focus on software, intelligent systems and practical digital products. His independent developer profile is available separately.</p></div><a class="btn secondary" href="/mohamed/"><span data-language="ar">الصفحة الشخصية ←</span><span data-language="en">Developer profile →</span></a></div></section>
-<section class="contact" id="contact"><div class="eyebrow">GET IN TOUCH / 05</div><h2><span data-language="ar">تواصل مع UMG</span><span data-language="en">Contact UMG</span></h2><p data-language="ar">للاستفسارات العامة والتواصل المهني والدعم المتعلق بالمشروعات، راسلنا مباشرة على البريد الإلكتروني.</p><p data-language="en">For professional enquiries and product-related questions, send us an email.</p><a class="mail" href="mailto:gm@umg-eg.com">gm@umg-eg.com ↗</a></section>
+<section class="about-band" id="approach"><div class="container about-flex"><div class="reveal"><div class="sec-overline" style="color:#55458f">02 / THE WAY WE THINK</div><h2><span data-lang="ar">الخيال جميل.<br>التنفيذ <em style="font-style:normal;color:#7155c0">أجمل.</em></span><span data-lang="en">Ideas are magic.<br>Making them <em style="font-style:normal;color:#7155c0">real.</em></span></h2><p data-lang="ar">من خبرة العمليات الصناعية لواجهات برمجية جذابة: هدفنا تجربة مفيدة ومختلفة، من أول لمسة لآخر تفصيلة.</p><p data-lang="en">From real industrial operations to expressive software experiences, we care about what works — and how it feels.</p><a class="lightbtn" href="/mohamed/"><span data-lang="ar">تعرف على المطور ↗</span><span data-lang="en">Meet the developer ↗</span></a></div><div class="about-symbol" aria-hidden="true">UMG.</div></div></section>
+<section class="contact-section container" id="contact"><div class="sec-overline reveal">03 / SAY HELLO</div><h2 class="sec-title reveal"><span data-lang="ar">عندك فكرة؟<br><span class="grad-text">يلا نحققها.</span></span><span data-lang="en">Got an idea?<br><span class="grad-text">Let's make it happen.</span></span></h2><p class="reveal" data-lang="ar">للتواصل المهني أو الاستفسار عن مشروعات UMG، ابعت لنا مباشرة. البريد مسجل على الدومين الرسمي.</p><p class="reveal" data-lang="en">For projects, partnerships or product enquiries, reach us at our official domain email.</p><a class="email-link" href="mailto:gm@umg-eg.com">gm@umg-eg.com ↗</a></section>
 </main>
-<footer><div class="shell footer-inner"><div>© <span id="year">2026</span> UMG · United Murad Group</div><div class="footer-links"><a href="/mohamed/">Mohamed Murad</a><a href="/apps/dollar/">DOLLAR</a><a href="/apps/dollar/support/">Support</a><a href="/apps/dollar/privacy/">Privacy</a><a href="mailto:gm@umg-eg.com">Email</a></div></div></footer>
+<footer class="footer"><div class="container foot-inner"><span>© <span id="year">2026</span> UMG · MURAD UNITED GROUP</span><div class="foot-links"><a href="/mohamed/">Mohamed Murad</a><a href="/apps/dollar/">DOLLAR</a><a href="/apps/dollar/support/">Support</a><a href="/apps/dollar/privacy/">Privacy</a></div></div></footer>
 <script>
 (function(){
- const root=document.documentElement,btn=document.getElementById('language'),menu=document.getElementById('menu'),nav=document.getElementById('nav');
- function setLanguage(lang){const en=lang==='en';root.classList.toggle('en',en);root.lang=lang;root.dir=en?'ltr':'rtl';btn.textContent=en?'عربي':'EN';try{localStorage.setItem('umg-lang',lang)}catch(e){}}
- let initial='ar';try{initial=localStorage.getItem('umg-lang')||'ar'}catch(e){}setLanguage(initial==='en'?'en':'ar');
- btn.addEventListener('click',()=>setLanguage(root.lang==='ar'?'en':'ar'));
- menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close menu':'Open menu')});
- nav.querySelectorAll('a').forEach(x=>x.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
- document.getElementById('year').textContent=String(new Date().getFullYear());
+'use strict';
+const root=document.documentElement,languageBtn=document.getElementById('language'),hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobile-menu');
+function applyLanguage(lang){const en=lang==='en';root.classList.toggle('en',en);root.lang=en?'en':'ar';root.dir=en?'ltr':'rtl';languageBtn.textContent=en?'عربي':'EN';try{localStorage.setItem('umg-lang',lang)}catch(e){}}
+let lang='ar';try{lang=localStorage.getItem('umg-lang')||'ar'}catch(e){}applyLanguage(lang);
+languageBtn.addEventListener('click',()=>applyLanguage(root.lang==='ar'?'en':'ar'));
+hamburger.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');hamburger.setAttribute('aria-expanded',String(open));hamburger.textContent=open?'✕':'☰'});
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.remove('open');hamburger.setAttribute('aria-expanded','false');hamburger.textContent='☰'}));
+document.getElementById('year').textContent=String(new Date().getFullYear());
+const topbar=document.getElementById('topbar'),progress=document.getElementById('progress');
+let scrolling=false;function scrollUpdate(){scrolling=false;topbar.classList.toggle('is-scrolled',window.scrollY>24);const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(max>0?Math.min(100,100*window.scrollY/max):0)+'%'}
+window.addEventListener('scroll',()=>{if(!scrolling){requestAnimationFrame(scrollUpdate);scrolling=true}},{passive:true});scrollUpdate();
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reveal=document.querySelectorAll('.reveal');
+if('IntersectionObserver' in window && !reduced){const io=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');io.unobserve(entry.target)}})},{threshold:.1});reveal.forEach(el=>io.observe(el))}else{reveal.forEach(el=>el.classList.add('visible'))}
+const scenes=Array.from(document.querySelectorAll('.scene')),dots=Array.from(document.querySelectorAll('#sceneDots button')),flip=document.getElementById('flipbox'),kinetic=document.getElementById('kinetic');
+const titles=['BEYOND<br>THE EXPECTED.','MAKE<br>IT REAL.','IDEAS<br>IN MOTION.'];
+const tags=['01 / INTELLIGENCE','02 / INDUSTRY','03 / SOFTWARE'];
+let index=0,busy=false,timer=null,hover=false;
+function changeScene(next){if(busy || next===index)return;busy=true;flip.classList.add('is-flipping');
+setTimeout(()=>{index=(next+scenes.length)%scenes.length;scenes.forEach((el,i)=>el.classList.toggle('active',i===index));dots.forEach((el,i)=>{el.classList.toggle('active',i===index);if(i===index)el.setAttribute('aria-current','true');else el.removeAttribute('aria-current')});
+document.getElementById('scene-title').innerHTML=titles[index];document.getElementById('scene-tag').textContent=tags[index];document.getElementById('scene-counter').textContent='0'+(index+1)+' / 03';flip.classList.remove('is-flipping');setTimeout(()=>busy=false,reduced?0:550)},reduced?0:350)}
+function advance(delta){changeScene((index+delta+scenes.length)%scenes.length);restart()}
+function stop(){if(timer){clearInterval(timer);timer=null}}
+function start(){stop();if(!reduced && !document.hidden && !hover){timer=setInterval(()=>changeScene((index+1)%scenes.length),5400)}}
+function restart(){start()}
+document.getElementById('prevScene').addEventListener('click',()=>advance(-1));
+document.getElementById('nextScene').addEventListener('click',()=>advance(1));
+dots.forEach((b,i)=>b.addEventListener('click',()=>{changeScene(i);restart()}));
+flip.addEventListener('click',()=>advance(1));flip.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();advance(1)}});
+kinetic.addEventListener('mouseenter',()=>{hover=true;stop()});kinetic.addEventListener('mouseleave',()=>{hover=false;start()});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();else start()});
+let touchX=0;kinetic.addEventListener('touchstart',e=>{touchX=e.changedTouches[0].clientX},{passive:true});kinetic.addEventListener('touchend',e=>{const delta=e.changedTouches[0].clientX-touchX;if(Math.abs(delta)>45)advance(delta<0?1:-1)},{passive:true});
+start();
 })();
 </script>
 </body></html>
