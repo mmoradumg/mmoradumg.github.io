@@ -7,6 +7,7 @@ on:
       - '.github/workflows/visual-qa.yml'
       - 'index.html'
       - 'apps/factory/index.html'
+      - 'mohamed/index.html'
   workflow_dispatch:
 
 permissions:
@@ -48,6 +49,12 @@ jobs:
               if(i<3){await page.locator('#nextScene').click();await page.waitForTimeout(1050);}
             }
             await page.screenshot({path:'screenshots/UMG-iPhone-fullpage.png',fullPage:true});
+            const cubeAnimation=await page.locator('#flipbox').evaluate(el=>getComputedStyle(el).animationName);
+            const faces=await page.locator('.cube-face').count();
+            console.log('Home cube animation',cubeAnimation,'additional faces',faces);
+            if(!cubeAnimation.includes('umg-rotation-360')||faces!==3)throw new Error('360-degree cube missing or inactive');
+            const homePhoto=await page.locator('.portrait-mark img').evaluate(img=>img.complete && img.naturalWidth>0);
+            if(!homePhoto)throw new Error('Home portrait did not load');
             console.log('iPhone title',await page.title());
             console.log('iPhone scene',await page.locator('#scene-title').innerText());
             await page.close();
@@ -73,6 +80,21 @@ jobs:
             const hasXScroll=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+3);
             console.log('Factory iPhone overflow',hasXScroll);
             if(hasXScroll)throw new Error('Factory overflows iPhone screen');
+            await page.close();
+            // Verify the approved personal-page portrait and slogan.
+            page=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,isMobile:true,hasTouch:true});
+            page.on('pageerror',e=>errors.push(e.message));
+            await page.goto('https://umg-eg.com/mohamed/?visual='+Date.now(),{waitUntil:'domcontentloaded',timeout:45000});
+            await page.locator('.monogram img').waitFor({timeout:10000});
+            await page.waitForTimeout(1500);
+            await page.screenshot({path:'screenshots/UMG-Mohmd-Profile-iPhone.png'});
+            await page.screenshot({path:'screenshots/UMG-Mohmd-Profile-iPhone-fullpage.png',fullPage:true});
+            const portraitOK=await page.locator('.monogram img').evaluate(img=>img.complete&&img.naturalWidth>0);
+            const sloganOK=await page.locator('.credo').count();
+            const titleOK=(await page.title()).includes('Mohmd Murad');
+            const profileOverflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+3);
+            console.log('Profile portrait loaded',portraitOK,'slogan',sloganOK,'title',titleOK,'overflow',profileOverflow);
+            if(!portraitOK || !sloganOK || !titleOK || profileOverflow)throw new Error('Profile screenshot verification failed');
             await page.close();
             console.log('Page errors',errors.join(' | ')||'none');
             if(errors.length)process.exitCode=1;
