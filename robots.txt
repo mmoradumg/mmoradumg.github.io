@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://umg-eg.com/sitemap.xml
