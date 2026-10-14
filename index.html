@@ -223,6 +223,26 @@ h1,h2,h3,p{margin-top:0}
 @media(max-width:380px){.kinetic{--cube-size:min(64vw,285px)}}
 @media(prefers-reduced-motion:reduce){.flipbox{animation:none!important;transform:rotateX(-9deg) rotateY(-18deg)}.kinetic:hover .flipbox{animation:none!important}}
 
+
+/* UMG FACTORY approved coming-soon cube illustration. Keeps the existing 360-degree rotation. */
+.poster:has(.scene-1.active) .poster-top,.poster:has(.scene-1.active) .poster-bottom{display:none}
+.scene-1{background:radial-gradient(ellipse at 68% 40%,rgba(53,158,255,.65),transparent 55%),linear-gradient(130deg,#15164c,#152e6a 52%,#7f408a)}
+.ad-factory-window{position:absolute;inset:0;overflow:hidden;background:linear-gradient(180deg,rgba(2,9,33,.2) 0%,rgba(4,7,29,.15) 30%,rgba(10,8,30,.1) 55%,rgba(5,11,31,.85) 100%),repeating-linear-gradient(91deg,rgba(168,212,255,.19) 0 2px,transparent 2px 49px),linear-gradient(130deg,#18234d,#173e80 56%,#ad4477)}
+.ad-factory-window:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 67% 55%,rgba(255,168,102,.48),transparent 23%),radial-gradient(circle at 26% 66%,rgba(21,195,255,.38),transparent 40%),linear-gradient(0deg,rgba(12,8,30,.66),transparent 45%)}
+.ad-factory-roof{position:absolute;inset:7% -5% auto;height:32%;transform:skewY(-7deg);background:repeating-linear-gradient(90deg,transparent 0 18%,rgba(138,200,255,.38) 18.3% 19%,transparent 19.5% 22%);border-bottom:5px solid rgba(54,172,242,.47)}
+.ad-machine{position:absolute;bottom:14%;height:26%;width:25%;border:2px solid #52a4fb;background:linear-gradient(133deg,#08152f,#315c9a 35%,#0f1f47 75%);box-shadow:0 0 16px #2081f3,inset 0 0 12px #267ff0;border-radius:8px}
+.ad-machine-a{left:4%;height:21%;width:18%}.ad-machine-b{left:29%;height:29%}.ad-machine-c{right:3%;height:35%}.ad-conveyor{position:absolute;bottom:10%;left:0;right:0;height:13%;transform:skewY(-7deg);border-top:10px solid rgba(105,218,255,.85);border-bottom:11px solid #091330;background:repeating-linear-gradient(90deg,#182b4e 0 18px,#4a74b0 20px 23px);box-shadow:0 0 22px #66ccff}
+.ad-industrial-arm{position:absolute;right:28%;bottom:23%;width:11px;height:39%;background:linear-gradient(90deg,#161c3d,#6689c1,#111d37);transform:rotate(-42deg);transform-origin:bottom;border:2px solid #3bbdff;box-shadow:0 0 13px #328ef9;border-radius:11px}.ad-industrial-arm:before{content:"";position:absolute;width:11px;height:85%;left:-6px;top:-64%;background:linear-gradient(90deg,#101c4e,#5996ca,#11194d);transform:rotate(69deg);transform-origin:bottom;border:2px solid #359cfa;border-radius:9px}.ad-industrial-arm i{position:absolute;top:-65%;left:-10px;width:23px;height:23px;border-radius:50%;background:#0c1837;border:4px solid #4aceff;box-shadow:0 0 14px #3cabff}.ad-industrial-arm b{position:absolute;bottom:-7px;left:-17px;width:40px;height:25px;background:#081d42;border:3px solid #4fd3ff;border-radius:5px}
+.ad-factory-sparks{position:absolute;right:27%;bottom:32%;height:45px;width:50px;border-radius:50%;background:radial-gradient(circle,#ffecca,#ff8f53 26%,rgba(255,92,48,.15) 58%,transparent 75%);filter:blur(2px);animation:adSparks 2s ease-in-out infinite alternate}
+@keyframes adSparks{to{opacity:.45;transform:scale(1.5)}}
+.ad-factory-copy{position:absolute;inset:8% auto auto 5%;width:85%;z-index:8;text-align:right;text-shadow:0 2px 11px rgba(4,9,32,.82)}
+.ad-coming{display:inline-block;padding:5px 17px;font-weight:850;font-size:clamp(10px,1.25vw,16px);border:1px solid #f2bcff;background:rgba(26,14,65,.68);border-radius:999px;color:#ffb7f8}
+.ad-main-head{font-weight:900;font-size:clamp(19px,2vw,31px);line-height:1.6;margin-top:12px;color:white}
+.ad-main-head em{font-style:normal;color:#f4a5ff}
+.ad-factory-copy p{font-size:clamp(10px,1vw,15px);font-weight:600;line-height:1.75;color:#f0e9ff;margin-top:8px}
+@media(max-width:760px){.ad-factory-copy{top:9%;left:5%;width:90%}.ad-main-head{font-size:clamp(14px,3.8vw,22px)}.ad-factory-copy p{font-size:10px}.ad-coming{font-size:10px;padding:4px 10px}}
+@media(prefers-reduced-motion:reduce){.ad-factory-sparks{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -256,15 +276,15 @@ h1,h2,h3,p{margin-top:0}
 <div class="stage-glow"></div><div class="stage-shadow"></div>
 <div class="flipbox" id="flipbox" tabindex="0" role="button" aria-label="Change visual scene" aria-describedby="scene-caption">
 <div class="poster" id="poster">
-<div class="scene scene-1 active" data-scene="0"><div class="beam"></div><div class="scene-grid"></div><div class="art-orb"></div><div class="ring"></div><div class="art-orb-mini"></div><i class="sparkle sp1"></i><i class="sparkle sp2"></i></div>
+<div class="scene scene-1 active" data-scene="0"><div class="ad-factory-window" aria-hidden="true"><div class="ad-factory-roof"></div><div class="ad-machine ad-machine-a"></div><div class="ad-machine ad-machine-b"></div><div class="ad-machine ad-machine-c"></div><div class="ad-conveyor"></div><div class="ad-industrial-arm"><i></i><b></b></div><div class="ad-factory-sparks"></div></div><div class="ad-factory-copy" dir="rtl"><span class="ad-coming">قريبًا</span><div class="ad-main-head">الذكاء الاصطناعي<br>يقوم <em>بتشغيل مصنع</em><br>بالكامل</div><p>للإنتاج، الورديات، المخازن،<br>الخامات والتكاليف</p></div></div>
 <div class="scene scene-2" data-scene="1"><div class="beam"></div><div class="scene-grid"></div><div class="cylinder cyl-one"></div><div class="cylinder cyl-two"></div><div class="cylinder cyl-three"></div><i class="sparkle sp1"></i></div>
 <div class="scene scene-3" data-scene="2"><div class="beam"></div><div class="scene-grid"></div><div class="glass-screen"><div class="glass-title"></div><div class="glass-chart"><i style="--h:48%"></i><i style="--h:79%"></i><i style="--h:62%"></i><i style="--h:93%"></i><i style="--h:69%"></i></div><div class="glass-dash" style="--w:84%"></div><div class="glass-dash" style="--w:59%"></div></div><div class="float-tile"></div></div>
 <div class="poster-light"></div>
-<div class="poster-top"><small>UMG / IMAGINATION LAB</small><span class="tag" id="scene-tag">01 / INTELLIGENCE</span></div>
-<div class="poster-bottom"><strong id="scene-title">BEYOND<br>THE EXPECTED.</strong><span id="scene-counter">01 / 03</span></div>
+<div class="poster-top"><small>UMG / FACTORY INTELLIGENCE</small><span class="tag" id="scene-tag">01 / FACTORY</span></div>
+<div class="poster-bottom"><strong id="scene-title">UMG<br>FACTORY.</strong><span id="scene-counter">01 / 03</span></div>
 </div>
 <div class="cube-face cube-right" aria-hidden="true"><span class="face-label">UMG / IDEAS IN MOTION</span><div class="face-sculpture"></div><div class="face-head">BUILDING<br>WHAT'S NEXT.</div></div>
-<div class="cube-face cube-back" aria-hidden="true"><span class="face-label">UMG / SMART INDUSTRY</span><div class="face-sculpture"></div><div class="face-head">UMG<br>FACTORY.</div></div>
+<div class="cube-face cube-back" aria-hidden="true"><span class="face-label">UMG / SMART INDUSTRY</span><div class="face-sculpture"></div><div class="face-head"><span style="color:#9ff5ff">UMG</span><br>FACTORY.<small style="display:block;font-size:.28em;letter-spacing:.14em;margin-top:12px;font-weight:700">COMING SOON</small></div></div>
 <div class="cube-face cube-left" aria-hidden="true"><span class="face-label">UMG / OUR VISION</span><div class="face-sculpture"></div><div class="face-head">IMAGINE.<br>CREATE.</div></div>
 </div>
 <div class="floater float-one">✦ &nbsp; MADE TO MOVE</div><div class="floater float-two">FUTURE / NOW &nbsp; ✧</div>
@@ -330,8 +350,8 @@ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const reveal=document.querySelectorAll('.reveal');
 if('IntersectionObserver' in window && !reduced){const io=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');io.unobserve(entry.target)}})},{threshold:.1});reveal.forEach(el=>io.observe(el))}else{reveal.forEach(el=>el.classList.add('visible'))}
 const scenes=Array.from(document.querySelectorAll('.scene')),dots=Array.from(document.querySelectorAll('#sceneDots button')),flip=document.getElementById('flipbox'),kinetic=document.getElementById('kinetic');
-const titles=['BEYOND<br>THE EXPECTED.','MAKE<br>IT REAL.','IDEAS<br>IN MOTION.'];
-const tags=['01 / INTELLIGENCE','02 / INDUSTRY','03 / SOFTWARE'];
+const titles=['UMG<br>FACTORY.','MAKE<br>IT REAL.','IDEAS<br>IN MOTION.'];
+const tags=['01 / FACTORY','02 / INDUSTRY','03 / SOFTWARE'];
 let index=0,busy=false,timer=null,hover=false;
 function changeScene(next){if(busy || next===index)return;busy=true;
 setTimeout(()=>{index=(next+scenes.length)%scenes.length;scenes.forEach((el,i)=>el.classList.toggle('active',i===index));dots.forEach((el,i)=>{el.classList.toggle('active',i===index);if(i===index)el.setAttribute('aria-current','true');else el.removeAttribute('aria-current')});
