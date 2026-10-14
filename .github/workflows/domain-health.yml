@@ -1,0 +1,70 @@
+name: UMG Domain Health
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - CNAME
+      - .github/workflows/domain-health.yml
+
+permissions:
+  contents: read
+
+jobs:
+  verify-domain:
+    name: Check site DNS, HTTPS and mail DNS
+    runs-on: ubuntu-latest
+    steps:
+      - name: Diagnose domain without changing DNS
+        shell: bash
+        run: |
+          set -uo pipefail
+          domain="umg-eg.com"
+          echo "## UMG domain diagnostics" >> "$GITHUB_STEP_SUMMARY"
+          echo "Checked: `$domain`. This workflow is **read-only**." >> "$GITHUB_STEP_SUMMARY"
+
+          actual_a="$(dig +time=5 +tries=2 +short A "$domain" @1.1.1.1 | sort -u || true)"
+          expected_a="$(printf '%s\n' 185.199.108.153 185.199.109.153 185.199.110.153 185.199.111.153 | sort)"
+          echo "### Apex DNS (A)" >> "$GITHUB_STEP_SUMMARY"
+          echo 'Expected GitHub Pages IPv4 addresses:' >> "$GITHUB_STEP_SUMMARY"
+          echo '185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Found:' >> "$GITHUB_STEP_SUMMARY"
+          echo '~~~' >> "$GITHUB_STEP_SUMMARY"
+          echo "${actual_a:-NO A RECORD}" >> "$GITHUB_STEP_SUMMARY"
+          echo '~~~' >> "$GITHUB_STEP_SUMMARY"
+          if [[ "$actual_a" == "$expected_a" ]]; then
+            echo '✅ All four recommended GitHub Pages A records match.' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo '⚠️ Root domain A records do not fully match GitHub Pages. Review Spaceship DNS.' >> "$GITHUB_STEP_SUMMARY"
+            echo '::warning::Root domain A records do not fully match GitHub Pages; edit only web records, not mail records.'
+          fi
+
+          actual_www="$(dig +time=5 +tries=2 +short CNAME "www.$domain" @1.1.1.1 || true)"
+          echo "### WWW DNS (CNAME)" >> "$GITHUB_STEP_SUMMARY"
+          echo "Found: \`${actual_www:-NO CNAME RECORD}\`" >> "$GITHUB_STEP_SUMMARY"
+          if [[ "$actual_www" == "mmoradumg.github.io." ]]; then
+            echo '✅ WWW points directly to mmoradumg.github.io.' >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo '⚠️ For www, use CNAME: www → mmoradumg.github.io.' >> "$GITHUB_STEP_SUMMARY"
+            echo '::warning::WWW CNAME is missing or different.'
+          fi
+
+          echo '### Public email DNS (read-only)' >> "$GITHUB_STEP_SUMMARY"
+          actual_mx="$(dig +time=5 +tries=2 +short MX "$domain" @1.1.1.1 || true)"
+          actual_txt="$(dig +time=5 +tries=2 +short TXT "$domain" @1.1.1.1 | head -12 || true)"
+          echo 'MX records:' >> "$GITHUB_STEP_SUMMARY"
+          echo '~~~' >> "$GITHUB_STEP_SUMMARY"
+          echo "${actual_mx:-NO MX RECORD}" >> "$GITHUB_STEP_SUMMARY"
+          echo '~~~' >> "$GITHUB_STEP_SUMMARY"
+          if [[ -z "$actual_mx" ]]; then echo '::warning::No public MX records found; mail may not receive messages.'; fi
+          echo 'This checks DNS presence only; it does not test mailbox delivery or alter records.' >> "$GITHUB_STEP_SUMMARY"
+
+          echo '### Web HTTPS checks' >> "$GITHUB_STEP_SUMMARY"
+          for url in "https://$domain/" "https://www.$domain/"; do
+            status="$(curl -L -sS -o /dev/null -w '%{http_code} %{url_effective} %{ssl_verify_result}' --connect-timeout 10 --max-time 25 "$url" 2>/dev/null || true)"
+            echo "- \`$url\`: \`${status:-UNREACHABLE}\`" >> "$GITHUB_STEP_SUMMARY"
+            echo "Checked $url : ${status:-UNREACHABLE}"
+          done
+
+          echo 'GitHub Pages settings: https://github.com/mmoradumg/mmoradumg.github.io/settings/pages' >> "$GITHUB_STEP_SUMMARY"
