@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#06151a">
+<meta name="description" content="UMG FACTORY — Coming Soon. An AI-powered factory operations platform for production oversight, fault diagnosis, predictive maintenance and intelligent industrial decisions.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="UMG FACTORY | Your Factory. One Intelligence.">
+<meta property="og:description" content="A connected factory management and predictive maintenance vision, powered by UMG ONE. Coming soon.">
+<meta property="og:url" content="https://umg-eg.com/apps/factory/">
+<link rel="canonical" href="https://umg-eg.com/apps/factory/">
+<link rel="icon" type="image/png" href="/assets/logo/favicon.png">
+<title>UMG FACTORY — Coming Soon | Powered by UMG ONE</title>
+<style>
+:root{color-scheme:dark;--dark:#061114;--card:#0b2023;--text:#edffff;--muted:#9cb9b8;--edge:rgba(155,247,228,.16);--mint:#a1ffe0;--ice:#61f1ed;--lime:#d1ff8f;--rose:#ffb5be;--max:1180px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 60% 27% at 90% 0,rgba(38,162,155,.19),transparent),radial-gradient(ellipse 40% 23% at 5% 60%,rgba(83,113,215,.13),transparent),var(--dark);color:var(--text);line-height:1.8;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit}button:focus-visible,a:focus-visible{outline:2px solid var(--lime);outline-offset:4px}.shell{width:min(var(--max),calc(100% - 48px));margin-inline:auto}.grain{position:fixed;inset:0;pointer-events:none;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 170 170' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.63' numOctaves='2' type='fractalNoise'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");z-index:7}
+header{position:sticky;top:0;z-index:12;background:rgba(4,17,20,.85);backdrop-filter:blur(19px);border-bottom:1px solid var(--edge)}.nav{display:flex;align-items:center;justify-content:space-between;gap:22px;min-height:73px}
+.brand{font-weight:900;font-size:19px;letter-spacing:-.03em;display:inline-flex;gap:10px;align-items:center;white-space:nowrap}.brand-mark{display:grid;place-items:center;width:38px;height:38px;border:1px solid rgba(207,255,240,.4);border-radius:12px;background:linear-gradient(125deg,rgba(137,255,215,.25),rgba(45,122,144,.08));font:900 11px Arial}.brand span:last-child{color:#c7ffed}.nav-right{display:flex;align-items:center;gap:20px;font-size:12px;color:#c4ddda}.nav-right a:hover{color:var(--lime)}.lang{border:1px solid rgba(197,255,236,.25);border-radius:999px;background:rgba(154,255,228,.08);color:var(--text);cursor:pointer;font-weight:800;padding:8px 13px}
+.hero{position:relative;min-height:720px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;padding:95px 0 95px}
+.hero:before{content:"";position:absolute;pointer-events:none;z-index:-1;inset:3% -19%;background:radial-gradient(ellipse 33% 34% at 76% 41%,rgba(23,193,171,.24),transparent 90%)}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--mint);font:800 11px/1.4 Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase}.eyebrow i{width:8px;height:8px;background:var(--mint);border-radius:50%;box-shadow:0 0 17px var(--mint)}
+.coming{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(218,255,175,.35);background:rgba(157,225,140,.1);color:var(--lime);border-radius:99px;font:800 10px Arial;letter-spacing:.19em;padding:8px 12px;margin-top:21px}
+h1,h2,h3,p{margin-top:0}.hero h1{font-size:clamp(48px,6vw,81px);line-height:1.12;letter-spacing:-.065em;margin:24px 0}.light{background:linear-gradient(106deg,#fcfffa,#8df7e2,#d3ff94);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(16px,1.5vw,20px);line-height:1.95;color:#bad4d0;max-width:555px}
+.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:33px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:13px;padding:13px 23px;border-radius:999px;font-weight:850;font-size:13px;transition:transform .2s}.btn:hover{transform:translateY(-3px)}.primary{background:linear-gradient(100deg,#94f5dc,#dcffac);color:#092220}.outline{border:1px solid rgba(197,255,238,.31);background:rgba(155,255,223,.04)}.caption{color:#86a9a5;font-size:12px;max-width:490px;margin-top:24px}
+.cockpit{position:relative;width:100%;max-width:560px;min-height:510px;justify-self:center;display:grid;place-items:center;isolation:isolate}.cockpit:before{content:"";position:absolute;inset:2%;background:radial-gradient(circle,rgba(43,212,188,.18),transparent 67%);filter:blur(27px);z-index:-1}
+.dashboard{width:min(100%,505px);border-radius:24px;overflow:hidden;border:1px solid rgba(188,255,235,.32);background:linear-gradient(150deg,rgba(23,55,57,.94),rgba(8,28,35,.96));box-shadow:0 40px 100px rgba(1,10,16,.6),inset 0 1px rgba(255,255,255,.13);transform:perspective(1100px) rotateY(-7deg) rotateX(5deg);animation:panelFloat 10s ease-in-out infinite}
+@keyframes panelFloat{50%{transform:perspective(1100px) rotateY(-4deg) rotateX(2deg) translateY(-12px)}}
+.dash-top{height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid rgba(177,255,228,.14);font:850 10px Arial,sans-serif;letter-spacing:.1em;direction:ltr}.dash-dots{display:flex;gap:7px}.dash-dots i{width:7px;height:7px;border-radius:50%;background:#8effd5}.dash-dots i:nth-child(2){background:#92dadc}.dash-dots i:nth-child(3){background:#516e73}
+.dash-inner{padding:22px}.dash-label{font:850 9px Arial,sans-serif;letter-spacing:.15em;color:#9ad3c9}.graph-area{border-radius:15px;border:1px solid rgba(142,254,219,.15);background:rgba(4,23,28,.55);padding:15px;position:relative;overflow:hidden}
+.machine-svg{display:block;width:100%;height:160px}.machine-svg .pipe{fill:none;stroke:#559b9f;stroke-width:8;stroke-linecap:round;stroke-linejoin:round}.machine-svg .machine{fill:#164b53;stroke:#76bdb6;stroke-width:3}.machine-svg .node{fill:#c7ffe3;stroke:#52e8c6;stroke-width:8;stroke-opacity:.3}.machine-svg .highlight{stroke:#d3ff90;stroke-width:2;fill:none;stroke-dasharray:4 10;animation:flow 5s linear infinite}@keyframes flow{to{stroke-dashoffset:-160}}
+.machine-svg .motor{fill:#2b7982;stroke:#97e2d8;stroke-width:3}.signal{display:flex;justify-content:space-between;align-items:center;gap:14px;font-size:11px;margin-top:8px}.signal strong{color:#e9ffe7}.signal span{color:#9fbbb9}.signal .led{width:7px;height:7px;display:inline-block;background:#cbff8c;border-radius:50%;margin-inline-end:6px;box-shadow:0 0 12px #d3ff8a;animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.45;box-shadow:0 0 20px #cbff8c}}
+.telemetry{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.mini{border:1px solid rgba(152,240,213,.15);background:rgba(18,50,54,.55);border-radius:13px;padding:13px}.mini span{display:block;color:#8eb6b2;font-size:10px}.mini b{display:block;font:850 14px Arial,sans-serif;margin:5px 0 7px}.trend{width:100%;height:27px}.trend polyline{fill:none;stroke:#7ef4d8;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.trend.alert polyline{stroke:#ffbf9e}.dash-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:15px;color:#8caaa6;font:700 9px Arial;letter-spacing:.04em}.warning-pill{color:#ffd9a3;background:rgba(234,160,98,.1);border:1px solid rgba(236,174,107,.24);border-radius:999px;padding:6px 10px}
+.floating-note{position:absolute;padding:10px 13px;background:rgba(27,61,64,.87);border:1px solid rgba(174,255,229,.38);backdrop-filter:blur(14px);border-radius:13px;font:800 9px Arial;letter-spacing:.05em;box-shadow:0 20px 35px #00181888;white-space:nowrap}.note-a{top:6%;right:0;animation:bob 7s ease-in-out infinite}.note-b{bottom:7%;left:0;animation:bob 7s -3s ease-in-out infinite;color:#d8ffab}@keyframes bob{50%{transform:translateY(-12px)}}
+.disclaimer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--edge);padding:24px 0;color:#95bcb3;font-size:11px}.disclaimer strong{color:#cdfae6}
+.sec{padding:95px 0 35px;scroll-margin-top:90px}.sec-label{font:800 11px Arial;letter-spacing:.21em;color:#a2ffdf}.sec h2{font-size:clamp(34px,5vw,57px);line-height:1.25;letter-spacing:-.05em;margin:18px 0}.sec-description{color:#acc9c4;font-size:16px;max-width:780px;line-height:1.95;margin:0 0 33px}
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.feature{position:relative;border:1px solid var(--edge);padding:27px;border-radius:20px;background:radial-gradient(circle at 100% 0,rgba(86,191,166,.1),transparent 62%),rgba(13,34,39,.75);min-height:250px}.feature .index{font:900 11px Arial;letter-spacing:.15em;color:#9affa6}.feature h3{font-size:21px;margin:29px 0 10px;letter-spacing:-.03em}.feature p{color:#a0bebb;line-height:1.85;font-size:14px;margin:0}
+.sequence{margin:85px 0 0;padding:40px;border:1px solid rgba(171,255,223,.24);border-radius:25px;background:linear-gradient(120deg,rgba(14,53,51,.65),rgba(22,33,54,.59));overflow:hidden}.sequence-title{font-weight:800;font-size:19px;margin-bottom:24px}.sequence-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;direction:ltr}.step{position:relative;background:rgba(5,26,29,.49);border:1px solid rgba(154,255,217,.15);padding:17px;border-radius:15px;font:800 11px Arial;letter-spacing:.02em}.step em{display:block;color:#b4ffad;margin-bottom:11px;font:900 12px Arial}.step span{display:block;color:#d6eae4}.step:not(:last-child):after{content:"→";color:#d5ff9b;font-size:20px;position:absolute;right:-14px;top:40%;z-index:2}
+.showcase{margin:115px 0 70px;border-radius:34px;padding:65px;background:linear-gradient(125deg,#d7fff0,#c8f5ff 44%,#daedff 79%,#f5f2bb);color:#0a2626;position:relative;overflow:hidden}.showcase:before{content:"";position:absolute;right:-95px;top:-100px;width:420px;height:420px;border:65px solid rgba(255,255,255,.5);border-radius:50%}.showcase h2{max-width:710px;font-size:clamp(36px,5.5vw,66px);line-height:1.2;letter-spacing:-.07em;position:relative;margin:20px 0}.showcase p{color:#3a6260;font-size:15px;line-height:1.9;max-width:700px;position:relative}.showcase .btn{position:relative;background:#092b2d;color:#e4ffed;margin-top:14px}
+footer{border-top:1px solid var(--edge);padding:29px 0;color:#84a8a2;font-size:12px}.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:15px}.foot-links{display:flex;flex-wrap:wrap;gap:17px}
+[data-l=en]{display:none}html.en{direction:ltr}html.en [data-l=ar]{display:none}html.en [data-l=en]{display:initial}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:13px;padding:76px 0 30px}.cockpit{max-width:520px}.features{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:610px){.shell{width:calc(100% - 36px)}.nav{min-height:65px}.nav-right{gap:11px}.nav-right a:nth-child(2){display:none}.brand{font-size:17px}.brand-mark{width:33px;height:33px}.hero h1{font-size:clamp(45px,11.4vw,62px)}.lead{font-size:15px}.eyebrow{font-size:10px}.cockpit{min-height:385px}.dashboard{transform:none;animation:none}.dash-inner{padding:13px}.dash-top{height:46px}.graph-area{padding:9px}.machine-svg{height:115px}.mini{padding:9px}.floating-note{font-size:7px;padding:7px 8px}.note-a{right:-3%;top:0}.note-b{bottom:4%;left:-3%}.disclaimer{display:block;line-height:2}.features{grid-template-columns:1fr}.feature{min-height:unset}.sec{padding:59px 0 20px}.sequence{margin:50px 0 0;padding:22px}.sequence-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.step:nth-child(2):after{display:none}.showcase{padding:30px;border-radius:21px;margin-top:65px}.showcase h2{font-size:39px}.actions .btn{flex:1}.foot{display:block}.foot-links{margin-top:13px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<header><div class="shell nav"><a class="brand" href="/"><span class="brand-mark">UMG</span><span>UMG FACTORY</span></a><div class="nav-right"><a href="/"><span data-l="ar">الرئيسية</span><span data-l="en">Home</span></a><a href="#features"><span data-l="ar">الإمكانيات</span><span data-l="en">Capabilities</span></a><button class="lang" id="lang" type="button" aria-label="Change language">EN</button></div></div></header>
+<main class="shell">
+<section class="hero">
+<div>
+<div class="eyebrow"><i></i> UMG ONE / FACTORY INTELLIGENCE</div>
+<div class="coming">✦ COMING SOON / IN DEVELOPMENT</div>
+<h1><span data-l="ar">مصنعك كله.<br><span class="light">بعقل واحد.</span></span><span data-l="en">Your factory.<br><span class="light">One intelligence.</span></span></h1>
+<p class="lead" data-l="ar">تخيّل مصنعك بيتكلم معاك. تتابع الإنتاج والمخازن والطاقة لحظة بلحظة، تكتشف مؤشرات العطل مبكرًا، وتقيّم احتمالات التوقف قبل ما تحصل — في منصة واحدة مدعومة بالذكاء الاصطناعي.</p>
+<p class="lead" data-l="en">Imagine a factory that talks back. Understand production, inventory and energy in one place; detect early warning signs, investigate faults and assess potential failures before they become costly downtime.</p>
+<div class="actions"><a class="btn primary" href="mailto:gm@umg-eg.com?subject=UMG%20FACTORY%20-%20Early%20Access"><span data-l="ar">سجّل اهتمامك ↗</span><span data-l="en">Request early access ↗</span></a><a class="btn outline" href="#features"><span data-l="ar">استكشف الرؤية ↓</span><span data-l="en">Explore the vision ↓</span></a></div>
+<p class="caption" data-l="ar">منظومة قيد التصميم والتطوير. التنبؤات احتمالية وتعتمد على جودة الحساسات والبيانات التاريخية، ولا تمنع كل الأعطال.</p>
+<p class="caption" data-l="en">Concept in development. Predictive insights depend on sensor coverage and reliable historical data; not every failure can be predicted.</p>
+</div>
+<div class="cockpit" aria-label="Illustrative preview of future factory intelligence dashboard">
+<div class="dashboard"><div class="dash-top"><strong>UMG ONE · FACTORY COCKPIT</strong><span class="dash-dots"><i></i><i></i><i></i></span></div>
+<div class="dash-inner"><div class="dash-label">ILLUSTRATIVE EXPERIENCE · NOT LIVE DATA</div>
+<div class="graph-area">
+<svg class="machine-svg" viewBox="0 0 430 170" role="img" aria-label="Stylized industrial production line and connected sensors">
+<path class="pipe" d="M30 112 H100 V90 H170 V112 H238 V57 H318 V110 H397"/>
+<rect class="machine" x="21" y="89" width="68" height="49" rx="8"/>
+<rect class="machine" x="169" y="88" width="75" height="52" rx="9"/>
+<rect class="machine" x="312" y="72" width="77" height="69" rx="8"/>
+<rect class="motor" x="42" y="75" width="35" height="22" rx="5"/>
+<rect class="motor" x="185" y="74" width="36" height="22" rx="5"/>
+<path class="highlight" d="M31 111 H100 V90 H170 V112 H238 V57 H318 V110 H396"/>
+<circle class="node" cx="108" cy="91" r="7"/><circle class="node" cx="240" cy="57" r="7"/><circle class="node" cx="389" cy="111" r="7"/>
+<path d="M42 142H397" stroke="#4b7a7d" stroke-width="3" stroke-dasharray="4 7"/>
+</svg>
+<div class="signal"><span><i class="led"></i><strong>CONNECTED INTELLIGENCE</strong></span><span>AI SIGNAL ENGINE</span></div>
+</div>
+<div class="telemetry"><div class="mini"><span>ANOMALY SIGNALS</span><b>PATTERN WATCH</b><svg class="trend" viewBox="0 0 130 27" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,19 12,18 21,21 35,12 45,15 55,7 67,13 76,9 88,17 100,8 110,14 130,5"/></svg></div>
+<div class="mini"><span>FAILURE RISK</span><b>EARLY INSIGHTS</b><svg class="trend alert" viewBox="0 0 130 27" preserveAspectRatio="none" aria-hidden="true"><polyline points="0,20 15,18 25,22 38,14 45,20 62,15 72,12 85,15 102,6 111,11 130,3"/></svg></div></div>
+<div class="dash-bottom"><span>OPERATIONS · QUALITY · MAINTENANCE</span><span class="warning-pill">CONCEPT PREVIEW</span></div>
+</div></div>
+<div class="floating-note note-a">◉ ANOMALY DETECTION</div><div class="floating-note note-b">↗ PREDICTIVE MAINTENANCE</div>
+</div>
+</section>
+<div class="disclaimer"><span><strong>UMG FACTORY</strong> · Powered by UMG ONE</span><span>COMING SOON · AI FOR INDUSTRIAL OPERATIONS</span></div>
+<section class="sec" id="features"><div class="sec-label">01 / THE FACTORY INTELLIGENCE SYSTEM</div><h2><span data-l="ar">مش مجرد برنامج إدارة.<br><span class="light">منظومة تفهم مصنعك.</span></span><span data-l="en">More than factory software.<br><span class="light">An intelligence layer.</span></span></h2>
+<p class="sec-description" data-l="ar">تصور متكامل يبدأ بالعمليات اليومية ويتوسع إلى فهم سلوك الماكينات. الهدف مساعدة المدير والفني على اتخاذ قرارات أسرع وأكثر استنادًا إلى البيانات.</p>
+<p class="sec-description" data-l="en">An integrated vision from everyday operations to equipment behavior. Designed to support faster, evidence-informed decisions for managers and technicians.</p>
+<div class="features">
+<article class="feature"><span class="index">01 / OPERATIONS</span><h3><span data-l="ar">إدارة المصنع بالكامل</span><span data-l="en">Connected operations</span></h3><p data-l="ar">الإنتاج والورديات والمخازن والخامات والمشتريات والتكاليف في شاشة تشغيل موحّدة.</p><p data-l="en">Production, shifts, inventory, materials, purchasing and costs in one operating view.</p></article>
+<article class="feature"><span class="index">02 / FAULT FINDING</span><h3><span data-l="ar">تشخيص الأعطال بالذكاء الاصطناعي</span><span data-l="en">AI-assisted fault diagnosis</span></h3><p data-l="ar">تحليل الأعراض والقراءات والصور والصوت للوصول إلى أسباب محتملة وخطوات فحص موصى بها.</p><p data-l="en">Analyze symptoms, readings, images and audio to suggest probable causes and next tests.</p></article>
+<article class="feature"><span class="index">03 / PREDICTION</span><h3><span data-l="ar">الصيانة التنبؤية</span><span data-l="en">Predictive maintenance</span></h3><p data-l="ar">رصد تغيرات الحرارة والاهتزاز والتيار والضغط، وتقييم خطر الأعطال قبل التوقف عندما تسمح البيانات.</p><p data-l="en">Track heat, vibration, current and pressure trends to assess failure risk when data supports it.</p></article>
+<article class="feature"><span class="index">04 / DIGITAL TWIN</span><h3><span data-l="ar">توأم رقمي للماكينات</span><span data-l="en">Equipment digital twin</span></h3><p data-l="ar">عرض حالة الأصول والتشغيل وسجل الأعطال ونقاط الضعف للمساعدة في التحليل.</p><p data-l="en">A connected view of asset status, history and operating conditions.</p></article>
+<article class="feature"><span class="index">05 / QUALITY</span><h3><span data-l="ar">الجودة والهالك والطاقة</span><span data-l="en">Quality, scrap & energy</span></h3><p data-l="ar">ربط مؤشرات الجودة والفاقد والاستهلاك بأسبابها التشغيلية لتحسين الكفاءة.</p><p data-l="en">Relate quality, waste and energy metrics to operating conditions.</p></article>
+<article class="feature"><span class="index">06 / ACTION</span><h3><span data-l="ar">تنبيهات وتوصيات قابلة للتنفيذ</span><span data-l="en">Actionable recommendations</span></h3><p data-l="ar">تذكير بالصيانة، تنبيه بالمؤشرات غير المعتادة، وتوثيق التدخلات مع صلاحيات واعتماد بشري.</p><p data-l="en">Maintenance reminders, unusual-pattern alerts and tracked interventions with human approval.</p></article>
+</div></section>
+<div class="sequence"><div class="sequence-title"><span data-l="ar">كيف يفكر UMG FACTORY؟</span><span data-l="en">The intelligence workflow</span></div><div class="sequence-steps"><div class="step"><em>01</em><span>SENSORS & ERP</span></div><div class="step"><em>02</em><span>DATA QUALITY</span></div><div class="step"><em>03</em><span>AI RISK ANALYSIS</span></div><div class="step"><em>04</em><span>HUMAN ACTION</span></div></div></div>
+<section class="showcase"><div class="sec-label" style="color:#316d58">02 / UMG ONE</div><h2><span data-l="ar">مصنعك بيتحرك.<br>خلي قراراتك تسبقه.</span><span data-l="en">Your factory moves.<br>Stay ahead of the next decision.</span></h2><p data-l="ar">UMG ONE هي الرؤية الأشمل لتوصيل الإدارة والتشخيص والتحليلات الذكية. وUMG FACTORY هو تطبيقها المخصص للمصانع. نبدأ بإدارة تشغيل حقيقية، ونطوّر القدرات التنبؤية تدريجيًا بعد التحقق من البيانات والنتائج.</p><p data-l="en">UMG ONE is the broader vision for connected management, diagnostics and intelligent analysis. UMG FACTORY brings that vision to industry. Capabilities will be developed and validated incrementally.</p><a class="btn" href="mailto:gm@umg-eg.com?subject=UMG%20FACTORY%20-%20Early%20Access"><span data-l="ar">تواصل للاهتمام المبكر ↗</span><span data-l="en">Get early-access updates ↗</span></a></section>
+</main>
+<footer><div class="shell foot"><span>© <span id="year">2026</span> UMG · MURAD UNITED GROUP</span><div class="foot-links"><a href="/">UMG</a><a href="/mohamed/">Mohamed Murad</a><a href="/apps/dollar/">DOLLAR</a><a href="mailto:gm@umg-eg.com">gm@umg-eg.com</a></div></div></footer>
+<script>
+(function(){
+const doc=document.documentElement,btn=document.getElementById('lang');
+let stored='ar';try{stored=localStorage.getItem('umg-lang')||'ar'}catch(e){}
+function switchLanguage(lang){const en=lang==='en';doc.lang=en?'en':'ar';doc.dir=en?'ltr':'rtl';doc.classList.toggle('en',en);btn.textContent=en?'عربي':'EN';try{localStorage.setItem('umg-lang',doc.lang)}catch(e){}}
+switchLanguage(stored);btn.addEventListener('click',()=>switchLanguage(doc.lang==='ar'?'en':'ar'));
+document.getElementById('year').textContent=String(new Date().getFullYear());
+})();
+</script></body></html>
