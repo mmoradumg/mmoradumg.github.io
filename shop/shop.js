@@ -1,5 +1,7 @@
 "use strict";
 const products=[
+{id:"plain200",name:"خرطوم ري سادة · 200 متر",price:400,type:"coil",detail:"بكرة 200 متر · القطر غير محدد",tag:"200 M"},
+{id:"drip200",name:"خرطوم تنقيط · 200 متر",price:550,type:"drip",detail:"بكرة 200 متر · القطر ومسافة النقاط غير محددين",tag:"200 M"},
 {id:"drip0",name:"خرطوم تنقيط 16 مم · 400 متر · ضمان الباب",price:450,type:"drip",detail:"مسافة نقاط 30 سم · بكرة 400 متر",tag:"400 M"},
 {id:"drip6",name:"خرطوم تنقيط 16 مم · 400 متر · ضمان 6 أشهر",price:525,type:"drip",detail:"مسافة نقاط 30 سم · بكرة 400 متر",tag:"6 MONTHS"},
 {id:"drip1",name:"خرطوم تنقيط 16 مم · 400 متر · ضمان سنة",price:600,type:"drip",detail:"مسافة نقاط 30 سم · بكرة 400 متر",tag:"1 YEAR"},
