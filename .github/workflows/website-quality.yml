@@ -1,0 +1,47 @@
+name: UMG Website Quality Gate
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'shop/**'
+      - '.github/workflows/website-quality.yml'
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'shop/**'
+      - '.github/workflows/website-quality.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: node --check shop/shop.js
+      - name: Check required pages and navigation
+        shell: python
+        run: |
+          from pathlib import Path
+          home=Path("index.html").read_text(encoding="utf-8")
+          shop=Path("shop/index.html").read_text(encoding="utf-8")
+          script=Path("shop/shop.js").read_text(encoding="utf-8")
+          assert Path("CNAME").read_text().strip()=="umg-eg.com"
+          assert 'href="/shop/"' in home
+          assert 'href="/#universes"' in home
+          assert 'id="universes"' in home
+          assert 'id="factory"' in home
+          assert 'id="manufacturing"' in home
+          assert "Mohmd Murad Is different" in home
+          assert "في العمل افتخر" in home
+          assert 'id="products"' in shop
+          assert 'id="drawer"' in shop
+          assert 'id="send-order"' in shop
+          assert 'shop.js' in shop
+          for p in ("drip0","drip6","drip1","drip2","drip3","drip5","coil1","coil3","join","tee","start","fix","end","elbow","valve","saddle","tee63"):
+              assert 'id:"'+p+'"' in script, p
+          assert 'mailto:gm@umg-eg.com' in script
+          print("Website source checks passed")
