@@ -3,7 +3,7 @@ const products=[
 {id:"plain200",name:"خرطوم ري سادة · 200 متر",price:400,type:"coil",detail:"بكرة 200 متر · القطر غير محدد",tag:"200 M"},
 {id:"drip200",name:"خرطوم تنقيط · 200 متر",price:550,type:"drip",detail:"بكرة 200 متر · القطر ومسافة النقاط غير محددين",tag:"200 M"},
 {id:"drip0",name:"خرطوم تنقيط 16 مم · 400 متر · ضمان الباب",price:450,type:"drip",detail:"مسافة نقاط 30 سم · بكرة 400 متر",tag:"400 M"},
-{id:"drip6",name:"خرطوم تنقيط GR 16 مم · 400 متر · ضمان 6 شهور",price:525,type:"drip",detail:"قطر 16 مم · بكرة 400 متر · نقاط 30 سم · خط فضي · شهادة ضمان مرفقة",tag:"6 MONTHS"},
+{id:"drip6",name:"خرطوم تنقيط GR 16 مم · 400 متر · ضمان 6 شهور",price:525,type:"drip",detail:"قطر 16 مم · بكرة 400 متر · نقاط 30 سم · بدون خط تمييز إضافي · شهادة ضمان مرفقة",tag:"6 MONTHS"},
 {id:"drip1",name:"خرطوم تنقيط GR 16 مم · 400 متر · ضمان سنة",price:600,type:"drip",detail:"قطر 16 مم · بكرة 400 متر · نقاط 30 سم · 15 كجم · خط أزرق · شهادة ضمان مرفقة",tag:"1 YEAR"},
 {id:"drip2",name:"خرطوم تنقيط 16 مم · 400 متر · ضمان سنتين",price:750,type:"drip",detail:"مسافة نقاط 30 سم · بكرة 400 متر",tag:"2 YEARS"},
 {id:"drip3",name:"خرطوم تنقيط GR 16 مم · 400 متر · ضمان 3 سنوات",price:950,type:"drip",detail:"قطر 16 مم · بكرة 400 متر · نقاط 30 سم · 17–18 كجم · خط برتقالي · شهادة ضمان مرفقة",tag:"3 YEARS"},
@@ -26,7 +26,7 @@ function toast(msg){const el=$("toast");el.textContent=msg;el.classList.add("sho
 
 const externalReferenceImages={drip:"https://c.cdnmp.net/129541978/p/m/5/tub-picurare-apa-rola-200m-4l-h-d16mm-pas-30cm-breckner-germany~10383255.jpg",coil:"https://www.netbricolage.com/42408-large_default/tuyau-polyethylene-noir-pe-d-irrigation-o-63-mm-8-kgbars-l100-m.jpg"};
 function productVisual(p){
- const lineColor={drip6:"#b4c4d2",drip1:"#268dff",drip3:"#ff8c36",drip5:"#caff32"}[p.id];
+ const lineColor={drip1:"#268dff",drip3:"#ff8c36",drip5:"#caff32"}[p.id];
  const ns="http://www.w3.org/2000/svg";const svg=document.createElementNS(ns,"svg");svg.setAttribute("viewBox","0 0 320 180");svg.setAttribute("role","img");svg.setAttribute("aria-label","رسم توضيحي لشكل "+p.name);svg.style.cssText="width:90%;height:88%;position:relative;z-index:1;filter:drop-shadow(0 16px 14px #0008)";
  const shape=(tag,attrs,parent=svg)=>{const e=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,String(v)));parent.append(e);return e};
  const pipe=(x,y,w=90)=>{shape("rect",{x,y,width:w,height:24,rx:8,fill:"#172a49",stroke:"#78b9e9","stroke-width":4});shape("path",{d:`M${x+8} ${y+5}H${x+w-8}`,stroke:"#b8dafa","stroke-width":3,opacity:.65})};
